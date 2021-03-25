@@ -72,7 +72,7 @@ const Home = (props)=>{
         
     ]
 
-    const [talents,setTalents] = useState(talentsArray)
+    const [talents] = useState(talentsArray)
 
     return(
 
