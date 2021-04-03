@@ -169,6 +169,7 @@ const Contact = (props)=>{
         /* axios.post(`endpoint`,values)
             .then(res=>(setSentForms([...sentForms,res.data])))
             .catch(err=>console.log(err))*/
+        setValues(initialCreds)
     }
 
     useEffect(()=>{

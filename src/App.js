@@ -11,6 +11,7 @@ import './App.css'
 import Contact from './components/Contact'
 import {Helmet} from 'react-helmet'
 import keywords from './keywords.js'
+import ImageCloseUp from './components/ImageCloseUp'
 
 function App() {
 
@@ -53,8 +54,12 @@ function App() {
 
           <Route exact path='/illustration'>
             <Helmet><title>Illustration | Eddie Lopez | Portfolio</title></Helmet>
-            
             <Illustration/>
+          </Route>
+
+          <Route exact path='/illustration/:id'>
+          <ImageCloseUp/>
+            
           </Route>
 
           <Route exact path='/photography'>
@@ -77,7 +82,7 @@ function App() {
             <Contact/>
           </Route>
 
-          <Route path = '*'>
+          <Route exact path = '*'>
             <h1>Sorry looks like this page couldnt be found or doesn't exist.</h1>
             <p>try navigating back to home.</p>
           </Route>
