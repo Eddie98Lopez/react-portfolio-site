@@ -20,6 +20,7 @@ cursor: pointer;
 &.active{
     color: ${props=> props.color ? props.color : 'gray'};
     
+    
     &:hover{
         color: white;
         background-color: ${props=>props.color ? props.color : 'grey'};
@@ -27,6 +28,16 @@ cursor: pointer;
     };
 };
 
+@media only screen and (max-width: 768px){
+    padding:1rem;
+    margin-right:1rem;
+
+    &.active{
+        color: ${props=>props.color? props.color : 'black'}
+    }
+
+  
+}
 
 
 `
