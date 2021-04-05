@@ -1,8 +1,9 @@
 import React from 'react'
 
-const Image = (props) => {
+const ImageThumb = (props) => {
 
     const {image} = props
+    console.log(image)
 
     return(
         <div key={image.id} className='imgWrapper'>
@@ -11,10 +12,7 @@ const Image = (props) => {
 
             <img src={image.src} alt={image.alt}/>
 
-            
-
         </div>
     )
 }
-
-export default Image
+export default ImageThumb

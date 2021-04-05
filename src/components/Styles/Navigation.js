@@ -13,7 +13,7 @@ cursor: pointer;
 &:hover{
     color: white;
     background-color: ${props=> props.color ? props.color : 'grey'};
-    transition: .3s ease-in;
+    transition: .2s ease-in;
 };
 
 
@@ -23,7 +23,7 @@ cursor: pointer;
     &:hover{
         color: white;
         background-color: ${props=>props.color ? props.color : 'grey'};
-        transition: .3s ease-in;
+        transition: .2s ease-in;
     };
 };
 

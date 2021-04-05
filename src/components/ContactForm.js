@@ -6,8 +6,7 @@ import schema from '../schema'
 const ContainerDiv=styled.div`
 
 width:100%;
-height:100%;
-background:rgb(186, 186, 186);
+
 `
 
 const StyledErrors= styled.div`
@@ -17,7 +16,6 @@ font-size:1.3rem;
 color:crimson;
 
 `
-
 
 const ContactForm= styled.form`
 
@@ -48,27 +46,38 @@ align-items:center;
 & input {
     border-radius: 10px;
     border: solid 2px rgb(54, 54, 54);
-    width: 100%;
+    width: 50%;
     padding:.5rem;
     height: 1.5rem;
     outline:none;
 
-}
+    &:focus{
+        border: solid 2px grey;
+        transition: .3s ease;
+    }
+
+};
 
 & textarea{
     border-radius: 10px;
     border: solid 2px rgb(54, 54, 54);
     font-family:sans-serif;
-    width: 100%;
+    width: 50%;
     height: 5rem;
     outline:none;
     padding:.5rem;
 
-}
+    &:focus{
+        border: solid 2px grey;
+        transition: .3s ease;
+    };
+
+
+};
 
 & button {
 
-    width: 53%;
+    width: 50%;
     margin-top:.5rem;
     outline:none;
     padding:1rem;
@@ -82,8 +91,7 @@ align-items:center;
     font-size:1rem;
     text-transform:uppercase;
     cursor:pointer;
-    position:relative;
-    left:10px;
+    
     border: solid 3px rgb(186, 186, 186);
 
     &:focus{
@@ -113,12 +121,22 @@ align-items:center;
    
 
 }
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 768px){
     
     
 
-    label{
+    & label,input,textarea,button{
         width:70%;
+    }
+
+}
+
+@media only screen and (max-width: 500px){
+    
+    
+
+    & label,input,textarea,button{
+        width:90%;
     }
 
 }`
@@ -182,41 +200,41 @@ const Contact = (props)=>{
 
                 <h2>CONTACT ME</h2>
 
-                <label>
+                <label htmlFor='firstName'></label>
                     <input
                     type='text'
                     name='firstName'
                     value={values.firstName}
                     onChange={onChange}
                     placeholder='First Name'/>
-                </label>
+                
 
-                <label>
+                <label htmlFor='LastName'></label>
                     <input
                     type='text'
                     name='lastName'
                     value={values.lastName}
                     onChange={onChange}
                     placeholder='Last Name'/>
-                </label>
+                
 
-                <label>
+                <label htmlFor='email'></label>
                     <input
                     type='text'
                     name='email'
                     value={values.email}
                     onChange={onChange}
                     placeholder='E-mail'/>
-                </label>
+                
 
-                <label>
+                <label htmlFor='text'></label>
                     <textarea
                     type='text'
                     name='text'
                     value={values.text}
                     onChange={onChange}
                     placeholder='Tell me more'/>
-                </label>
+                
 
                 <button disabled={disabled}>Send</button>
 

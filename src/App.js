@@ -8,7 +8,7 @@ import Photography from './components/Photography'
 import Design from './components/Design'
 import About from './components/About'
 import './App.css'
-import Contact from './components/Contact'
+import ContactRoute from './components/ContactRoute'
 import {Helmet} from 'react-helmet'
 import keywords from './keywords.js'
 import ImageCloseUp from './components/ImageCloseUp'
@@ -57,9 +57,8 @@ function App() {
             <Illustration/>
           </Route>
 
-          <Route exact path='/illustration/:id'>
-          <ImageCloseUp/>
-            
+          <Route exact path='/illustration/:collection/:id'>
+          <ImageCloseUp/> 
           </Route>
 
           <Route exact path='/photography'>
@@ -79,7 +78,7 @@ function App() {
 
           <Route exact path='/contact'>
           <Helmet><title>Contact | Eddie Lopez | Fresno CA</title></Helmet>
-            <Contact/>
+            <ContactRoute/>
           </Route>
 
           <Route exact path = '*'>

@@ -1,4 +1,4 @@
-//import narnia0 from '../Illustration/Narnia/0-narnia.jpg'
+//import narnia0 from '../Illustration/narnia/0-narnia.jpg'
 import narnia1 from '../Illustration/Narnia/1-narnia.jpg'
 import narnia2 from '../Illustration/Narnia/2-narnia.jpg'
 import narnia3 from '../Illustration/Narnia/3-narnia.jpg'
@@ -31,12 +31,12 @@ export const illustrationGallery ={
     narnia:[ 
         /* {
         id:1,
-        title: 'Narnia Lettering',
+        title: 'narnia Lettering',
         description: '',
         src: narnia0,
         year: 2018,
         alt: '',
-        collection: 'Narnia'
+        collection: 'narnia'
 
     }, */
 
@@ -46,7 +46,7 @@ export const illustrationGallery ={
     description:'',
     year: 2018,
     alt: '',
-    collection: 'Narnia'},
+    collection: 'narnia'},
 
     {
     id:3,
@@ -55,7 +55,7 @@ export const illustrationGallery ={
     description:'',
     year: 2018,
     alt: '',
-    collection:'Narnia'
+    collection:'narnia'
     },
 
     {
@@ -65,7 +65,7 @@ export const illustrationGallery ={
         description:'',
         year: 2018,
         alt: '',
-        collection: 'Narnia'
+        collection: 'narnia'
         },
     
     {
@@ -75,7 +75,7 @@ export const illustrationGallery ={
         description:',',
         year : 2019,
         alt: '',
-        collection: 'Narnia'
+        collection: 'narnia'
 
         },
 
@@ -85,10 +85,10 @@ export const illustrationGallery ={
         src: narnia5,
         description: '',
         alt: '',
-        collection: 'Narnia'
+        collection: 'narnia'
     },
     {
-        id:21,
+        id:7,
         title: "The Silver Chair",
         src: narnia6,
         alt:'',
@@ -96,7 +96,7 @@ export const illustrationGallery ={
         collection:'narnia'
     }],
     pride:[{
-        id:15,
+        id:16,
         title: 'Male Nude 1',
         src: folsom0,
         description: '',
@@ -104,7 +104,7 @@ export const illustrationGallery ={
         collection: 'Pride',
     },
     {
-        id: 16,
+        id: 17,
         title: 'Male Nude 2',
         src: folsom1,
         description: '',
@@ -112,7 +112,7 @@ export const illustrationGallery ={
         collection: 'Pride'
     },
     {
-        id:16,
+        id:18,
         title: 'Male Nude 3',
         src: folsom2,
         description:'',
@@ -120,7 +120,7 @@ export const illustrationGallery ={
         collection:'Pride'
        },
        {
-           id:17,
+           id:19,
            title: 'Male Nude 4',
            src: folsom3,
            description: '',
@@ -128,7 +128,7 @@ export const illustrationGallery ={
            collection:'Pride'
        }],
     comics: [{
-        id:10,
+        id:11,
         title: "Human Torch",
         src: comic0,
         description:'',
@@ -137,7 +137,7 @@ export const illustrationGallery ={
 
     },
     {
-        id:11 ,
+        id:12 ,
         title: 'Doctor Strange',
         src: comic1,
         description: '',
@@ -145,7 +145,7 @@ export const illustrationGallery ={
         collection:"Comic Book"
     },
     {
-        id:12,
+        id:13,
         title: 'Storm',
         src:comic2,
         description:'',
@@ -153,7 +153,7 @@ export const illustrationGallery ={
         collection:"Comic Book"
     },
     {
-        id: 13,
+        id: 14,
         title: 'Venom',
         src: comic3,
         description:'',
@@ -161,7 +161,7 @@ export const illustrationGallery ={
         collection: 'Comic Book'
     },
     {
-        id: 14,
+        id: 15,
         title: 'Scarlet Witch',
         src: comic4,
         description: '',
@@ -169,7 +169,7 @@ export const illustrationGallery ={
         collection: 'Comic Book'   
      }],
     misc:[{
-        id: 18,
+        id: 20,
         title: 'BLM',
         src: misc0,
         description: '',
@@ -178,7 +178,7 @@ export const illustrationGallery ={
 
     },
     {
-        id:19,
+        id:21,
         title: 'Justice',
         src: misc1,
         description: ' ',
@@ -186,7 +186,7 @@ export const illustrationGallery ={
         collection: 'Misc'
     },
     {
-        id: 20,
+        id: 22,
         title: 'Drunk Love',
         src: misc2,
         description: '',
@@ -194,7 +194,7 @@ export const illustrationGallery ={
         collection:'Misc'
     }],
     muerte:[{
-        id:7,
+        id:8,
         title: "Queen Muerte",
         src: muerte0,
         description: '',
@@ -202,7 +202,7 @@ export const illustrationGallery ={
         collection: "La Muerte"
     },
     {
-        id: 8,
+        id: 9,
         title:"OG Muerte",
         src: muerte1,
         description: '',
@@ -210,7 +210,7 @@ export const illustrationGallery ={
         collection: 'La Muerte'
     },
     {
-        id:9,
+        id:10,
         title: "La Llorona",
         src:muerte2,
         description:'',
