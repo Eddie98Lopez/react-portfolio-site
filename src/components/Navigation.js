@@ -1,82 +1,28 @@
-import React from 'react'
+import React, { useState,useEffect }  from 'react'
 import styled from 'styled-components'
-//import './App.css'
-import {NavLink} from 'react-router-dom'
-
-const ContainerDiv = styled.div`
-
-position:sticky;
-top:0;
-z-index:2;`
-
-
+import {useHistory,useLocation} from 'react-router-dom'
+import logo from '../assets/logo.svg'
+import '../App.css'
+import {NavLink} from './Styles'
 
 
 const Nav = styled.nav`
 
+  
+    position:sticky;
+    top:0;
+    z-index:10;
     width: 100%;
     margin:0px;
     background-color: rgba(255, 255, 255,.9);
-    
-
-& a {
-    padding: 2rem;
-    text-decoration: none;
-    font-family:'Lato', sans-serif;
-    font-weight: 900;
-    color: rgb(175, 175, 175);
-    cursor: pointer;
-
-
-
-    &:hover {
-        color: white;
-        background-color: grey;
-        transition: .3s ease-in;
-    }
-
-
-}
-
-.activeStyle  {
-    color: black;
-
-    & :hover{
-        color:white
-    }
-}
-.activeStyleP  {
-    color: purple;
-
-    & :hover{
-        color:white
-    }
-}
-.activeStyleT  {
-    color: teal;
-
-    & :hover{
-        color:white
-    }
-}
-.activeStyleO {
-    color: orange;
-
-    & :hover{
-        color:white
-    }
-}
 
 @media only screen and (max-width: 768px){
     
-    transition: .3s ease-in;
-
-    a{
+    transition: .25s ease-in;
+   & a{
         font-size: .95rem;
-        
         padding: 1.25rem;
     }
-
 }
 `
 
@@ -84,24 +30,82 @@ const NavLinks = styled.div`
     margin: auto 20%;
     display: flex;
     align-items: center;
-    justify-content: space-around;`
+    justify-content: space-around;
+
+    @media only screen and (max-width: 768px) {
+        display:${props => props.mobile===true? 'flex' : 'none'};
+        flex-direction:column;
+        transition: ease-in-out .3s;
+        width: 100%;
+        margin:0;
+        position:absolute;
+        background:rgba(255,255,255, .98);
+        z-index:4;
+        animation: fade-in;
+      }
+    
+    `
+
+const MobileNav = styled.div`
+
+display:none;
+
+@media only screen and (max-width: 768px) {
+    display:flex;
+    justify-content: space-between;
+    width:100%;
+    background:rgba(186, 186, 186, .8);
+
+    & img{
+        padding:.5rem 0;
+        height: 40px;
+        margin: 0 1rem;
+    }
+    
+  }
+  
+  @media only screen and (max-width: 500px){
+      & img{
+          height:25px;
+      }
+  }`
+
+
+   
 
 
 const Navigation = (props)=>{
 
+    const {push} = useHistory()
+    const [mobile, setMobile] = useState(false)
+    const location = useLocation()
+
+  useEffect(()=>{
+
+    setMobile(false)
+
+  },[location])
+
+    
+
     return(
-        <ContainerDiv>
+        
         <Nav>
-          <NavLinks>
-          <NavLink  exact to='/' activeClassName='activeStyle'>Home</NavLink>
-          <NavLink to='/illustration' id='illustrationLink' activeClassName='activeStyleP'>Illustration</NavLink>
-          <NavLink to='/design' id='designLink' activeClassName='activeStyleO'>Design</NavLink>
-          <NavLink to='/photography' id='photographyLink' activeClassName='activeStyleT'>Photography</NavLink>
-          <NavLink to='/about' activeClassName='activeStyle'>About</NavLink>
-          <NavLink to='/contact' activeClassName='activeStyle'>Contact</NavLink>
+            <MobileNav>
+              <img src={logo} alt='logo' onClick={()=>{push('/')}} />
+              <img  onClick={()=>setMobile(!mobile)}src='https://upload.wikimedia.org/wikipedia/commons/b/b2/Hamburger_icon.svg' alt='hamburger-menu'/>
+          </MobileNav>
+          <NavLinks mobile={mobile}>
+          <NavLink  exact to='/' activeStyle>Home</NavLink>
+          <NavLink to='/illustration' color='purple' activeStyle>Illustration</NavLink>
+          <NavLink to='/design' color='orange' activeStyle>Design</NavLink>
+          <NavLink to='/photography' color='teal' activeStyle>Photography</NavLink>
+          <NavLink to='/about' activeStyle>About</NavLink>
+          <NavLink to='/contact' activeStyle>Contact</NavLink>
           </NavLinks>
+          
         </Nav>
-        </ContainerDiv>
+        
     )
 
 }

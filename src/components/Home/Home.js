@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import styled from 'styled-components'
 import Services from './Services'
-import Contact from '../Contact'
+import Contact from '../ContactForm'
 import About from '../About'
 import photography from '../../assets/Services/photography.jpg'
 import illustration from '../../assets/Services/illustration.jpg'
@@ -13,16 +13,15 @@ const GridWrapper = styled.section`
     grid-template-rows: 90vh;
     margin: 0px;
 
-
     @media only screen and (max-width: 768px){
-        grid-template-rows: 60vh
+        grid-template-rows: 60vh;
 
-    }
+    };
 
 
     @media only screen and (max-width: 710px){
         grid-template-columns: auto;
-        grid-template-rows: 200px 200px 200px;
+        grid-template-rows: repeat(3,7rem);
 
     }
    `
@@ -31,9 +30,13 @@ display:grid;
 grid-template-columns:1fr 1fr;
 grid-template-rows: auto;
 
+& .contact{
+    background:rgb(186, 186, 186);
+};
+
 @media only screen and (max-width: 768px){
     grid-template-columns: auto;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 20rem auto;
 
 }`
 
@@ -41,33 +44,27 @@ const HomeWrapper=styled.div`
 animation: fade-in 1s ease-in;`
 
 const Home = (props)=>{
-    
-    
 
     const talentsArray = [
         {
             h2: 'Illustration',
             image: illustration,
-            style: '',
             id: 'illustration',
             backgroundColor: 'purple',
-            link:'/illustration'
+            
         },
         {
             h2: 'Design',
             image: design,
-            style: '',
             id: 'design',
-            backgroundColor: 'orange',
-            link:'/design'
+            backgroundColor: 'orange'
         },
         {
             h2: 'Photography',
             image: photography,
-            style: '',
             id: 'photography',
             backgroundColor: 'teal',
-            link:'/photography'
+            
         },
         
     ]
@@ -78,11 +75,11 @@ const Home = (props)=>{
 
         <HomeWrapper>
         <GridWrapper>
-            {talents.map(item=> <Services talent={item} key={item.id}/>)}
+            {talents.map(item=> <Services color={item.backgroundColor} talent={item} key={item.id}/>)}
         </GridWrapper>
         <GridWrapper2>
             <About/>
-            <Contact/>
+            <div className='contact'><Contact/></div>
         </GridWrapper2>
         
         </HomeWrapper>
