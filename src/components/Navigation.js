@@ -15,9 +15,10 @@ const Nav = styled.nav`
     width: 100%;
     margin:0px;
     background-color: rgba(255, 255, 255,.9);
+    
 
 @media only screen and (max-width: 768px){
-    
+    box-shadow:  0px 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: .25s ease-in;
    & a{
         font-size: 1.5rem;
@@ -33,16 +34,40 @@ const NavLinks = styled.div`
     align-items: center;
     justify-content: space-around;
 
+    & .close{ 
+      display:none;
+    }
+
     @media only screen and (max-width: 768px) {
         display:${props => props.mobile===true? 'flex' : 'none'};
         flex-direction:column;
         transition: ease-in-out .3s;
+        align-items:flex-end;
+        justify-content: flex-start;
         width: 100%;
         margin:0;
+        padding: 1rem 0;
+        overflow:hidden;
+        box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.3);
         position:absolute;
-        background:rgba(255,255,255, .98);
-        z-index:4;
+      
+        left:0;
+        background:rgba(255, 255, 255, .98);
+        z-index:3;
         animation: fade-in;
+       border-top: dashed 1.5px gray;
+
+        & .close{
+          display:block;
+          color: crimson;
+          font-weight:400;
+          transform-text: lowercase;
+          padding:1rem;
+          font-size:1rem;
+          margin-right:1rem;
+          
+
+        }
 
       }
     
@@ -101,6 +126,7 @@ const Navigation = (props)=>{
           <NavLink to='/photography' color='teal'>Photography</NavLink>
           <NavLink to='/about'>About</NavLink>
           <NavLink to='/contact'>Contact</NavLink>
+          <div className='close' onClick={()=> setMobile(false)}>close X</div>
           </NavLinks>
           
         </Nav>
