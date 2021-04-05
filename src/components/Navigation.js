@@ -96,12 +96,12 @@ const Navigation = (props)=>{
               <img  onClick={()=>setMobile(!mobile)}src='https://upload.wikimedia.org/wikipedia/commons/b/b2/Hamburger_icon.svg' alt='hamburger-menu'/>
           </MobileNav>
           <NavLinks mobile={mobile}>
-          <NavLink  exact to='/' activeStyle>Home</NavLink>
-          <NavLink to='/illustration' color='purple' activeStyle>Illustration</NavLink>
-          <NavLink to='/design' color='orange' activeStyle>Design</NavLink>
-          <NavLink to='/photography' color='teal' activeStyle>Photography</NavLink>
-          <NavLink to='/about' activeStyle>About</NavLink>
-          <NavLink to='/contact' activeStyle>Contact</NavLink>
+          <NavLink  exact to='/'>Home</NavLink>
+          <NavLink to='/illustration' color='purple'>Illustration</NavLink>
+          <NavLink to='/design' color='orange'>Design</NavLink>
+          <NavLink to='/photography' color='teal'>Photography</NavLink>
+          <NavLink to='/about'>About</NavLink>
+          <NavLink to='/contact'>Contact</NavLink>
           </NavLinks>
           
         </Nav>
