@@ -49,7 +49,7 @@ transition: .3s ease-in;
 
 &:hover {
     color:white;
-    background: ${props=>props.color};
+    background: ${props=>`rgb(${props.color})`};
 };
 
 &:hover~img{
@@ -61,6 +61,12 @@ transition: .3s ease-in;
 
 @media only screen and (max-width:710px){
 top:95%;
+
+
+&:hover {
+    color:white;
+    background: ${props=>`rgba(${props.color},.75)`};
+
 }
 
 

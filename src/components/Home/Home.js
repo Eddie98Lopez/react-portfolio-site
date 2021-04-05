@@ -50,20 +50,20 @@ const Home = (props)=>{
             h2: 'Illustration',
             image: illustration,
             id: 'illustration',
-            backgroundColor: 'purple',
+            backgroundColor: '128,0,128',
             
         },
         {
             h2: 'Design',
             image: design,
             id: 'design',
-            backgroundColor: 'orange'
+            backgroundColor: '255,165,0'
         },
         {
             h2: 'Photography',
             image: photography,
             id: 'photography',
-            backgroundColor: 'teal',
+            backgroundColor: '0,128,128',
             
         },
         
