@@ -20,8 +20,9 @@ const Nav = styled.nav`
     
     transition: .25s ease-in;
    & a{
-        font-size: .95rem;
-        padding: 1.25rem;
+        font-size: 1.5rem;
+        padding:3rem 2rem;
+        
     }
 }
 `
@@ -60,15 +61,12 @@ display:none;
         padding:.5rem 0;
         height: 40px;
         margin: 0 1rem;
+        cursor:pointer;
     }
     
   }
   
-  @media only screen and (max-width: 500px){
-      & img{
-          height:25px;
-      }
-  }`
+`
 
 
    
