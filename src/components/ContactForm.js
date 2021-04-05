@@ -52,7 +52,7 @@ align-items:center;
     outline:none;
 
     &:focus{
-        border: solid 2px grey;
+        border: solid 2px lightslategray;
         transition: .3s ease;
     }
 
@@ -68,7 +68,7 @@ align-items:center;
     padding:.5rem;
 
     &:focus{
-        border: solid 2px grey;
+        border: solid 2px lightslategray;
         transition: .3s ease;
     };
 
@@ -136,7 +136,13 @@ align-items:center;
     
 
     & label,input,textarea,button{
-        width:90%;
+        width:95%;
+
+    }
+
+    & input,textarea{
+        padding: .7rem;
+        font-size: 1.05rem;
     }
 
 }`
