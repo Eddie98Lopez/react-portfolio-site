@@ -21,7 +21,7 @@ const Nav = styled.nav`
     transition: .25s ease-in;
    & a{
         font-size: 1.5rem;
-        padding:3rem 2rem;
+        
         
     }
 }
@@ -43,6 +43,7 @@ const NavLinks = styled.div`
         background:rgba(255,255,255, .98);
         z-index:4;
         animation: fade-in;
+
       }
     
     `
