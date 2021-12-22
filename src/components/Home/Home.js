@@ -48,7 +48,7 @@ const Home = (props)=>{
     const talentsArray = [
         {
             h2: 'Illustration',
-            image: illustration,
+            image: 'https://drive.google.com/uc?id=1u4XYz7DayLL9NBQzV6HJ8aRvSM4RsDbt',
             id: 'illustration',
             backgroundColor: '128,0,128',
             
@@ -79,7 +79,7 @@ const Home = (props)=>{
         </GridWrapper>
         <GridWrapper2>
             <About/>
-            <div className='contact'><Contact/></div>
+            <div className='contact' id='contact'><Contact/></div>
         </GridWrapper2>
         
         </HomeWrapper>

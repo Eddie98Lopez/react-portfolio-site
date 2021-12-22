@@ -80,6 +80,7 @@ const Services = (props)=>{
 
     const {talent,color} = props
     const {push} = useHistory()
+    console.log(talent.image)
 
 
     return(
