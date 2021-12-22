@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import About from "./About";
+import Contact from "./ContactForm";
 
 const Home = () => {
   return (
@@ -11,7 +12,7 @@ const Home = () => {
 
       <div>Header</div>
       <About/>
-      <div>Contact</div>
+      <Contact/>
     </div>
   );
 };
