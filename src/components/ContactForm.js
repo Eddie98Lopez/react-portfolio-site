@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import {Form} from './styled-components'
+import { Form, Section } from "./styled-components";
+import axios from 'axios'
 import * as Yup from "yup";
-import schema from "../utils/schema";
+import {schema, baseURL} from "../utils";
 import Input from "./Input";
 
 const Contact = (props) => {
-
   const initialCreds = {
     first: "",
     last: "",
@@ -24,7 +24,6 @@ const Contact = (props) => {
   const [values, setValues] = useState(initialCreds);
   const [errs, setErrs] = useState(initialErrs);
   const [disabled, setDisabled] = useState(true);
-  const [sentForms, setSentForms] = useState([]);
 
   ///-------helpers
 
@@ -41,10 +40,10 @@ const Contact = (props) => {
   const onSubmit = (e) => {
     e.preventDefault();
     console.log(values);
-    setSentForms([...sentForms, values]);
-    /* axios.post(`endpoint`,values)
-            .then(res=>(setSentForms([...sentForms,res.data])))
-            .catch(err=>console.log(err))*/
+    
+     axios.post(`${baseURL}/messages`,values)
+            .then(res=>console.log(res))
+            .catch(err=>console.log(err))
     setValues(initialCreds);
   };
 
@@ -53,63 +52,59 @@ const Contact = (props) => {
   }, [values]);
 
   return (
-    <section id='contact'>
-
-        <h2>Contact</h2>
+    <Section id="contact">
+      <h2>Contact</h2>
       <Form onSubmit={onSubmit}>
-
-          <div className='leftForm'>
-            <div className='firstlast'>
+        <div className="formContainer">
+          {" "}
+          <div className="leftForm">
+            <div className="firstlast">
               <Input
                 name={"first"}
                 onChange={onChange}
                 value={values["first"]}
                 error={errs["first"]}
-                placeholder='John'
+                placeholder="John"
               />
               <Input
                 name={"last"}
                 onChange={onChange}
                 value={values["last"]}
                 error={errs["last"]}
-                placeholder='Doe'
+                placeholder="Doe"
               />
             </div>
 
             <Input
-                name={"phone"}
-                onChange={onChange}
-                value={values["phone"]}
-                error={errs["phone"]}
-                placeholder='xxx-xxx-xxxx'
-              />
-              <Input
-                name={"email"}
-                onChange={onChange}
-                value={values["email"]}
-                error={errs["email"]}
-                placeholder='john@johndoe.com'/>
-
-
+              name={"phone"}
+              onChange={onChange}
+              value={values["phone"]}
+              error={errs["phone"]}
+              placeholder="xxx-xxx-xxxx"
+            />
+            <Input
+              name={"email"}
+              onChange={onChange}
+              value={values["email"]}
+              error={errs["email"]}
+              placeholder="john@johndoe.com"
+            />
           </div>
-          <div className='rightForm'>
-          <Input
-                textArea
-                name={"message"}
-                onChange={onChange}
-                value={values["message"]}
-                error={errs["message"]}
-                placeholder = 'Your message here ...'/>
-              
+          <div className="rightForm">
+            <Input
+              textArea
+              name={"message"}
+              onChange={onChange}
+              value={values["message"]}
+              error={errs["message"]}
+              placeholder="Your message here ..."
+            />
           </div>
+        </div>
 
-          <button disabled={disabled}>Send</button>
-
-
-        
+        <button disabled={disabled}>Send</button>
       </Form>
-      
-    </section>
+    </Section>
   );
 };
 

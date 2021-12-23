@@ -1,11 +1,17 @@
 import styled from "styled-components";
 
 export const Form = styled.form`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  gap: 1rem;
-  box-sizing: border-box;
+& .formContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 1rem;
+    box-sizing: border-box;
+    @media only screen and (max-width:768px){
+        grid-template-columns: 100%;
+    
+      }
+}
 
   & .errors {
     color: crimson;
@@ -20,6 +26,8 @@ export const Form = styled.form`
   }
   & .rightForm {
   }
+
+
 `;
 
 export const Input = styled.input`
@@ -32,11 +40,16 @@ export const Input = styled.input`
   outline: none;
   box-sizing: border-box;
   color:${(props) => props.theme.colors.white};
+  
 
   &:focus {
     border: none;
     border-bottom: solid 2px white;
     transition: 0.3s ease;
+  }
+
+  @media only screen and (max-width:768px){
+      font-size:1.25rem;
   }
 `;
 
@@ -68,4 +81,7 @@ export const TextArea = styled.textarea`
     border-bottom: solid 2px white;
     transition: 0.3s ease;
   }
+  @media only screen and (max-width:768px){
+    font-size:1.25rem;
+}
 `;

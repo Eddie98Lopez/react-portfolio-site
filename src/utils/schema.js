@@ -11,12 +11,10 @@ const schema = Yup.object().shape({
     .required("Last name is required.")
     .min(2, "Last name must be at least 2 characters long."),
   phone: Yup.string()
-    .matches(phoneRegex, "Invalid phone number.")
-    .required("Phone is required."),
+    .matches(phoneRegex, "Invalid phone number.").notRequired(),
 
   email: Yup.string().email("Must enter valid email").required(),
   message: Yup.string().required("Must fill out text box field."),
-  date: Yup.string(),
 });
 
 export default schema;
