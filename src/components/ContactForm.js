@@ -1,84 +1,116 @@
-import React, {useState,useEffect} from 'react'
-import * as Yup from 'yup'
-import schema from '../utils/schema'
-import Input from './Input'
+import React, { useState, useEffect } from "react";
+import {Form} from './styled-components'
+import * as Yup from "yup";
+import schema from "../utils/schema";
+import Input from "./Input";
 
+const Contact = (props) => {
 
-const Contact = (props)=>{
+  const initialCreds = {
+    first: "",
+    last: "",
+    phone: "",
+    email: "",
+    message: "",
+  };
+  const initialErrs = {
+    first: "",
+    last: "",
+    phone: "",
+    email: "",
+    message: "",
+  };
 
-    const fields = ['first','last','phone','email']
+  const [values, setValues] = useState(initialCreds);
+  const [errs, setErrs] = useState(initialErrs);
+  const [disabled, setDisabled] = useState(true);
+  const [sentForms, setSentForms] = useState([]);
 
-    const initialCreds={
-        first:'',
-        last:'',
-        phone:'',
-        email:'',
-        text:'',
-      }
-      const initialErrs={
-        first:'',
-        last:'',
-        phone:'',
-        email:'',
-        text:'',
-      }
-    
-      const [values,setValues]=useState(initialCreds)
-      const [errs,setErrs]=useState(initialErrs)
-      const [disabled,setDisabled]=useState(true)
-      const [sentForms,setSentForms]=useState([])
-    
-      ///-------helpers
-    
+  ///-------helpers
 
-    const onChange=(e)=>{
+  const onChange = (e) => {
+    const { name, value } = e.target;
+    setValues({ ...values, [name]: value });
 
-        const{name,value}=e.target
-        setValues({...values, [name]:value})
+    Yup.reach(schema, name)
+      .validate(value)
+      .then((res) => setErrs({ ...errs, [name]: "" }))
+      .catch((err) => setErrs({ ...errs, [name]: err.errors[0] }));
+  };
 
-        Yup.reach(schema, name)
-            .validate(value)
-            .then(res=>setErrs({...errs, [name]:''}))
-            .catch(err=>setErrs({...errs,[name]:err.errors[0]}))}
-
-    const onSubmit=(e)=>{
-
-        e.preventDefault()
-        console.log(values)
-        setSentForms([...sentForms,values])
-        /* axios.post(`endpoint`,values)
+  const onSubmit = (e) => {
+    e.preventDefault();
+    console.log(values);
+    setSentForms([...sentForms, values]);
+    /* axios.post(`endpoint`,values)
             .then(res=>(setSentForms([...sentForms,res.data])))
             .catch(err=>console.log(err))*/
-        setValues(initialCreds)
-    }
+    setValues(initialCreds);
+  };
 
-    useEffect(()=>{
-        schema.isValid(values).then(valid=>setDisabled(!valid))
-    },[values])
+  useEffect(() => {
+    schema.isValid(values).then((valid) => setDisabled(!valid));
+  }, [values]);
 
-    return(
-        <div>
-            <form onSubmit={onSubmit}>
+  return (
+    <section id='contact'>
 
+        <h2>Contact</h2>
+      <Form onSubmit={onSubmit}>
 
-            {fields.map(item =>{
-                return(
-                <Input name={item}
+          <div className='leftForm'>
+            <div className='firstlast'>
+              <Input
+                name={"first"}
                 onChange={onChange}
-                value={values[item]}
-                error={errs[item]}/>)
-            })}
-                
+                value={values["first"]}
+                error={errs["first"]}
+                placeholder='John'
+              />
+              <Input
+                name={"last"}
+                onChange={onChange}
+                value={values["last"]}
+                error={errs["last"]}
+                placeholder='Doe'
+              />
+            </div>
 
-                <button disabled={disabled}>Send</button>
+            <Input
+                name={"phone"}
+                onChange={onChange}
+                value={values["phone"]}
+                error={errs["phone"]}
+                placeholder='xxx-xxx-xxxx'
+              />
+              <Input
+                name={"email"}
+                onChange={onChange}
+                value={values["email"]}
+                error={errs["email"]}
+                placeholder='john@johndoe.com'/>
 
 
-                
+          </div>
+          <div className='rightForm'>
+          <Input
+                textArea
+                name={"message"}
+                onChange={onChange}
+                value={values["message"]}
+                error={errs["message"]}
+                placeholder = 'Your message here ...'/>
+              
+          </div>
 
-            </form>
-        </div>
-    )
+          <button disabled={disabled}>Send</button>
 
-}
 
-export default Contact
+        
+      </Form>
+      
+    </section>
+  );
+};
+
+export default Contact;
