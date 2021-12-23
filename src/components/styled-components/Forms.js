@@ -1,35 +1,87 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
+export const Form = styled.form`
+& .formContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 1rem;
+    box-sizing: border-box;
+    @media only screen and (max-width:768px){
+        grid-template-columns: 100%;
+    
+      }
+}
+
+  & .errors {
+    color: crimson;
+  }
+
+  & .firstlast {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+  & .leftForm {
+  }
+  & .rightForm {
+  }
+
+
+`;
 
 export const Input = styled.input`
-border-radius: 10px;
-border: solid 2px rgb(54, 54, 54);
-width: 50%;
-padding:.5rem;
-height: 1.5rem;
-outline:none;
+  border: none;
+  border-radius: 2px;
+  border-bottom: solid 2px ${(props) => props.theme.colors.grey};
+  background: rgba(255, 255, 255, 0.1);
+  width: 100%;
+  padding: 0.5rem;
+  outline: none;
+  box-sizing: border-box;
+  color:${(props) => props.theme.colors.white};
+  
 
-&:focus{
-    border: solid 2px lightslategray;
-    transition: .3s ease;
-}`
+  &:focus {
+    border: none;
+    border-bottom: solid 2px white;
+    transition: 0.3s ease;
+  }
+
+  @media only screen and (max-width:768px){
+      font-size:1.25rem;
+  }
+`;
 
 export const Label = styled.label`
-display:block;
-margin:.5rem;
-width:50%;
-text-transform:capitalize`
+  display: block;
+  margin: 0.5rem;
+  width: 50%;
+  text-transform: capitalize;
+  font-family: ${(props) => props.theme.displayFont};
+  font-size: 1rem;
+  color: ${(props) => props.theme.colors.white};
+`;
 
 export const TextArea = styled.textarea`
-border-radius: 10px;
-border: solid 2px rgb(54, 54, 54);
-font-family:sans-serif;
-width: 50%;
-height: 5rem;
-outline:none;
-padding:.5rem;
+  border: none;
+  border-radius: 2px;
+  border-bottom: solid 2px ${(props) => props.theme.colors.grey};
+  background: rgba(255, 255, 255, 0.1);
+  width: 100%;
+  min-height: 10.3rem;
+  padding: 0.5rem;
+  outline: none;
+  box-sizing: border-box;
+  resize: none;
+  color:${(props) => props.theme.colors.white};
 
-&:focus{
-    border: solid 2px lightslategray;
-    transition: .3s ease;
-};`
+  &:focus {
+    border: none;
+    border-bottom: solid 2px white;
+    transition: 0.3s ease;
+  }
+  @media only screen and (max-width:768px){
+    font-size:1.25rem;
+}
+`;
