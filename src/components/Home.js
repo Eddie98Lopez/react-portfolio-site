@@ -9,6 +9,7 @@ const Home = () => {
       <Helmet>
         <title>Illustrator | Developer | Eddie Lopez | Fresno CA</title>
       </Helmet>
+      <div id='top'></div>
 
       <div>Header</div>
       <About/>

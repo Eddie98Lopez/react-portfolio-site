@@ -59,8 +59,11 @@ export const Label = styled.label`
   width: 50%;
   text-transform: capitalize;
   font-family: ${(props) => props.theme.displayFont};
-  font-size: 1rem;
+  font-size: .85em;
   color: ${(props) => props.theme.colors.white};
+  @media only screen and (max-width:768px){
+    font-size:1rem;
+}
 `;
 
 export const TextArea = styled.textarea`
@@ -69,7 +72,7 @@ export const TextArea = styled.textarea`
   border-bottom: solid 2px ${(props) => props.theme.colors.grey};
   background: rgba(255, 255, 255, 0.1);
   width: 100%;
-  min-height: 10.3rem;
+  min-height: 9.95rem;
   padding: 0.5rem;
   outline: none;
   box-sizing: border-box;
