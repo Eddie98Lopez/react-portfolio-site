@@ -1,7 +1,9 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import Header from "./Header";
 import About from "./About";
 import Contact from "./ContactForm";
+import QuickGallery from './QuickGallery'
 
 const Home = () => {
   return (
@@ -12,7 +14,11 @@ const Home = () => {
       </Helmet>
       <div id='top'></div>
 
-      <div>Header</div>
+      <Header/>
+      <QuickGallery
+        title="recent works"
+        array={['item','item','item','item']}
+        link='all work >'/>
       <About/>
       <Contact/>
     </div>
