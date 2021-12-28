@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Logo from "../assets/Logo";
 import { Nav, NavLinks } from "./styled-components";
 import { NavHashLink } from "react-router-hash-link";
-import SocialLinksList from "./SocialLinksList";
+import SocialList from "./SocialList/SocialList";
 import { socialsNav } from "../utils";
 
 const Navigation = () => {
@@ -31,7 +31,7 @@ const Navigation = () => {
           </div>
         </NavLinks>
 
-        <SocialLinksList list={socialsNav}/>
+        <SocialList list={socialsNav}/>
       </div>
     </Nav>
   );

@@ -1,5 +1,3 @@
-import React from "react";
-import SocialLink from "./SocialLink";
 import styled from "styled-components";
 
 const SocialWrapper = styled.div`
@@ -19,17 +17,4 @@ const SocialWrapper = styled.div`
     fill: ${(props) => props.theme.colors.black};
   }
 `;
-
-const SocialLinksList = (props) => {
-  const { list } = props;
-
-  return (
-    <SocialWrapper>
-      {list.map((link) => (
-        <SocialLink link={link} />
-      ))}
-    </SocialWrapper>
-  );
-};
-
-export default SocialLinksList;
+export default SocialWrapper

@@ -1,9 +1,9 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import Header from "./Header";
-import About from "./About";
-import Contact from "./ContactForm";
-import QuickGallery from './QuickGallery'
+import About from "./About/About";
+import Contact from "./Contact/Contact";
+import {QuickGallery} from './Gallery'
 
 const Home = () => {
   return (
@@ -12,7 +12,7 @@ const Home = () => {
         <title>Illustrator | Developer | Eddie Lopez | Fresno CA</title>
 
       </Helmet>
-      <div id='top'></div>
+  
 
       <Header/>
       <QuickGallery

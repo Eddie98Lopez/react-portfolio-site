@@ -1,8 +1,14 @@
 import styled from "styled-components";
 
 export const Form = styled.form`
+display:flex;
+width:100%;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 & .formContainer{
     display: grid;
+    width:100%;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     gap: 1rem;
@@ -55,7 +61,7 @@ export const Input = styled.input`
 
 export const Label = styled.label`
   display: block;
-  margin: 0.5rem;
+  margin: 0.5rem 0 ;
   width: 50%;
   text-transform: capitalize;
   font-family: ${(props) => props.theme.displayFont};

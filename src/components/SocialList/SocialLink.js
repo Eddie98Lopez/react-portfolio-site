@@ -1,7 +1,5 @@
 import React from 'react'
-import Instagram from "../assets/Instagram";
-import LinkedIn from "../assets/LinkedIn";
-import GitHub from "../assets/GitHub";
+import { Instagram, LinkedIn, GitHub } from '../../assets/socialIcons.js'
 
 const SocialLink = (props) => {
     const {type, href} = props.link

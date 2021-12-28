@@ -6,7 +6,7 @@ import { Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import theme from "./utils/theme";
 import "./App.css";
-import Gallery from "./components/Gallery";
+import Gallery from "./components/Gallery/Gallery";
 
 /*<Helmet><title>Illustrator | Graphic Desiger | Eddie Lopez | Fresno CA</title>*/
 
