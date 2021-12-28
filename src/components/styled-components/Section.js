@@ -30,7 +30,15 @@ const Section = styled.section`
     line-height: 1.75rem;
   }
 
+
+
   ${(props) => props.styles}
+
+  @media only screen and (max-width:768px){
+    min-height:auto;
+    padding: 2rem;
+    margin:0;
+  }
 `;
 
 export default Section;

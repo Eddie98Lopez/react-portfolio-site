@@ -6,7 +6,7 @@ const SocialList = (props) => {
   const { list } = props;
 
   return (
-    <SocialWrapper>
+    <SocialWrapper {...props}>
       {list.map((link) => (
         <SocialLink link={link} />
       ))}
