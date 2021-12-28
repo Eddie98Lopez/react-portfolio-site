@@ -5,7 +5,7 @@ const Section = styled.section`
   padding: 0 5%;
   width: 100%;
   position: relative;
-  height: ${(props) => (props.height ? props.height : "80vh")};
+  min-height: ${(props) => (props.height ? props.height : "80vh")};
 
   & h1,
   h2,
