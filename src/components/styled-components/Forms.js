@@ -33,7 +33,7 @@ export const Form = styled.form`
 export const Input = styled.input`
   border: none;
   border-radius: 2px;
-  border-bottom: solid 2px ${(props) => props.theme.colors.grey};
+  border-bottom: solid 3px ${(props) => props.theme.colors.grey};
   background: rgba(255, 255, 255, 0.1);
   width: 100%;
   padding: 0.5rem;
@@ -44,7 +44,7 @@ export const Input = styled.input`
 
   &:focus {
     border: none;
-    border-bottom: solid 2px white;
+    border-bottom: solid 3px white;
     transition: 0.3s ease;
   }
 
@@ -69,10 +69,10 @@ export const Label = styled.label`
 export const TextArea = styled.textarea`
   border: none;
   border-radius: 2px;
-  border-bottom: solid 2px ${(props) => props.theme.colors.grey};
+  border-bottom: solid 3px ${(props) => props.theme.colors.grey};
   background: rgba(255, 255, 255, 0.1);
   width: 100%;
-  min-height: 9.95rem;
+  min-height: 10.18rem;
   padding: 0.5rem;
   outline: none;
   box-sizing: border-box;
@@ -81,7 +81,7 @@ export const TextArea = styled.textarea`
 
   &:focus {
     border: none;
-    border-bottom: solid 2px white;
+    border-bottom: solid 3px white;
     transition: 0.3s ease;
   }
   @media only screen and (max-width:768px){

@@ -4,6 +4,9 @@ import axios from 'axios'
 import * as Yup from "yup";
 import {schema, baseURL} from "../utils";
 import Input from "./Input";
+const styles = `
+margin-top:40vh;
+padding-bottom:6rem;`
 
 
 
@@ -54,7 +57,7 @@ const Contact = (props) => {
   }, [values]);
 
   return (
-    <Section id="contact">
+    <Section id="contact" height="auto" styles={styles}>
       <h2>Contact</h2>
       <Form onSubmit={onSubmit}>
         <div className="formContainer">
