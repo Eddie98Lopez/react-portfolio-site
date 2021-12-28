@@ -10,6 +10,8 @@ position:relative;
 display: flex;
 flex-direction: column;
 justify-content:space-between;
+border-bottom: 2px solid ${props =>props.theme.colors.white};
+background:  ${props =>props.theme.colors.white};
 
 & div{
     width:100%;
@@ -20,6 +22,7 @@ justify-content:space-between;
     display:flex;
     justify-content:flex-start;
     align-items:center;
+    
 
     & #hamburger{display:none;};
 }
@@ -34,6 +37,7 @@ justify-content:space-between;
     padding: .5rem 1rem;
     position:sticky:
     top:0;
+    background:none;
 
     & .bottom{
         box-sizing:border-box;
@@ -46,6 +50,7 @@ justify-content:space-between;
         display:flex;
         justify-content:space-between;
         height: 50px;
+        fill: ${props =>props.theme.colors.white};
 
         & #hamburger{display:block;};
 
