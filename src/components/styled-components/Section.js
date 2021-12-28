@@ -7,20 +7,7 @@ const Section = styled.section`
   position: relative;
   min-height: ${(props) => (props.height ? props.height : "80vh")};
 
-  & h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: ${(props) => props.theme.displayFont};
-    margin-bottom: 1rem;
-    color: ${(props) => props.theme.colors.grey};
-  }
-
-  & h2 {
-    font-size: 1.5rem;
-  }
+ ${props=>props.theme.heading};
 
   & span,
   p {

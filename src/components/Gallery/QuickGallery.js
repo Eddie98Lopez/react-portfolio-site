@@ -4,6 +4,10 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
   padding: 0 5%;
+
+
+  ${props => props.theme.heading};
+
   & .images {
     display: grid;
     gap:1rem;
