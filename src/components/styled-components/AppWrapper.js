@@ -29,6 +29,8 @@ const AppWrapper = styled.div`
 
     & .left {
       position:sticky;
+      z-index:5;
+      background:${props=>props.theme.colors.black};
       top:0px;
     }
 
