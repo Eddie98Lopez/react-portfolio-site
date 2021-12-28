@@ -15,6 +15,7 @@ const AppWrapper = styled.div`
   & .right {
     box-sizing: border-box;
     overflow-x: hidden;
+    height:100%;
     overflow-y: scroll;
     background: #2c2c2c;
     &::-webkit-scrollbar {

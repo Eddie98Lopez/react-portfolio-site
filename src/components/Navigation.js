@@ -1,5 +1,5 @@
-import React, {useState} from "react";
-import { Link } from "react-router-dom";
+import React, {useState,useEffect} from "react";
+import { Link, useLocation } from "react-router-dom";
 import Logo from "../assets/Logo";
 import { Nav, NavLinks } from "./styled-components";
 import { NavHashLink } from "react-router-hash-link";
@@ -9,6 +9,11 @@ import Hamburger from "../assets/hamburger";
 
 const Navigation = () => {
   const [mobile,setMobile] = useState(false)
+  const location = useLocation()
+
+  useEffect(()=>{
+    setMobile(false)
+  },[location])
 
 
   return (
