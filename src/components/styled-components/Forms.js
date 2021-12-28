@@ -55,7 +55,8 @@ export const Input = styled.input`
   }
 
   @media only screen and (max-width:768px){
-      font-size:1.25rem;
+      font-size:1.4rem;
+      padding:.75rem;
   }
 `;
 
@@ -91,6 +92,7 @@ export const TextArea = styled.textarea`
     transition: 0.3s ease;
   }
   @media only screen and (max-width:768px){
-    font-size:1.25rem;
+    font-size:1.4rem;
+    padding:.75rem;
 }
 `;

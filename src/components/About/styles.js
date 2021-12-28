@@ -11,7 +11,7 @@ grid-template-areas:
 
 & .about{
   grid-area:a;
-  position:relative;
+  
 }
 
 & .img{
@@ -20,6 +20,24 @@ grid-template-areas:
   width:20rem;
   height: 80%;
   grid-area: i;
+}
+
+@media only screen and (max-width:768px){
+  gap: 2rem;
+
+  grid-template-areas: 
+'i a'
+
+;
+& .img{
+  background:white;
+  width:10rem;
+  height: 10rem;
+  grid-area: i;
+  
+}
+
+
 }
 `
 
