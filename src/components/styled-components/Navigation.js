@@ -64,7 +64,7 @@ background:  ${props =>props.theme.colors.white};
 
 export const NavLinks = styled.div`
 box-sizing:border-box;
-padding-bottom: 8rem;
+padding-bottom: 3rem;
 font-family: ${props=> props.theme.displayFont};
 color: ${props=> props.theme.colors.grey};
 
