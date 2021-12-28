@@ -1,6 +1,5 @@
 import React from "react";
 import { Section } from "../styled-components";
-import HeaderLettering from "./HeaderLettering";
 
 
 

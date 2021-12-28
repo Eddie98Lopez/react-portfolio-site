@@ -19,7 +19,7 @@ const Section = styled.section`
 
 
 
-  ${(props) => props.styles}
+  ${(props) => props.styles};
 
   @media only screen and (max-width:768px){
     min-height:auto;

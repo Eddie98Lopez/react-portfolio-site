@@ -31,7 +31,7 @@ export const QuickGallery = (props) => {
       <h2>{title}</h2>
       <div className="images">
         {array.map((item) => (
-          <GalleryThumb project={item} />
+          <GalleryThumb project={item}/>
         ))}
       </div>
       <span>{link}</span>
