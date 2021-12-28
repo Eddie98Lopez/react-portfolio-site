@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 const Section = styled.section`
   box-sizing: border-box;
-  width: 90%;
-  margin: auto;
+  padding: 0 5%;
+  width: 100%;
   position: relative;
   height: ${(props) => (props.height ? props.height : "80vh")};
 

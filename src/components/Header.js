@@ -1,11 +1,10 @@
 import React from 'react'
 import { Section } from './styled-components'
-/* const styles = '
-' */
 
-const Header = () => {
+
+const Header = (props) => {
     return (
-        <Section height='80vh'>
+        <Section height='80vh' id='top'>
             
         </Section>
     )
