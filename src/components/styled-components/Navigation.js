@@ -35,7 +35,7 @@ background:  ${props =>props.theme.colors.white};
 @media only screen and (max-width:768px){
     height:auto;
     padding: .5rem 1rem;
-    position:sticky:
+    position:sticky;
     top:0;
     background:none;
 

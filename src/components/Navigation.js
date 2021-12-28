@@ -17,7 +17,7 @@ const Navigation = () => {
 
 
   return (
-    <Nav mobile={mobile}>
+    <Nav mobile={mobile} className='left'>
       <div className="mobile">
         <Logo />
 

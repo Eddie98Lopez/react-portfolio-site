@@ -8,6 +8,7 @@ const AppWrapper = styled.div`
   grid-template-columns: 0.75fr 2fr;
   grid-template-rows: 100%;
   overflow: hidden;
+  position:relative;
 
   & .left {
     box-sizing: border-box;
@@ -24,12 +25,21 @@ const AppWrapper = styled.div`
   }
 
   @media only screen and (max-width:768px){
-    display:flex;
-    flex-direction:column;
+    display:block;
 
-    & .right{
-      height: auto;
+    & .left {
+      position:sticky;
+      top:0px;
     }
+
+    & .right {
+      box-sizing: border-box;
+      background: #2c2c2c;
+      padding-bottom: 7rem;
+   
+    }
+
+
   }
 `;
 
