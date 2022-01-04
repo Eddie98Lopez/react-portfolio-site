@@ -5,21 +5,21 @@ import styled from "styled-components";
 const Wrapper = styled.div`
   padding: 0 5%;
 
-
-  ${props => props.theme.heading};
+  ${(props) => props.theme.heading};
 
   & .images {
     display: grid;
-    gap:1rem;
+    gap: 1rem;
     grid-template-areas: "a a a a";
 
-    @media only screen and (max-width:768px){
-        grid-template-areas: "a a"
+    @media only screen and (max-width: 768px) {
+      grid-template-areas:
+        "a a"
         "a a";
     }
 
-    & div{
-        background:white;
+    & div {
+      background: white;
     }
   }
 `;
@@ -31,7 +31,7 @@ export const QuickGallery = (props) => {
       <h2>{title}</h2>
       <div className="images">
         {array.map((item) => (
-          <GalleryThumb project={item}/>
+          <GalleryThumb project={item} />
         ))}
       </div>
       <span>{link}</span>
