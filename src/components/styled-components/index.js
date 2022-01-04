@@ -3,6 +3,7 @@ import Section from "./Section";
 import { Input as StyledInput, Label, TextArea, Form } from "./Forms";
 import { Nav, NavLinks } from "./Navigation";
 import Button from "./Button";
+import ImageContainer from "./imageContainer";
 
 export {
   AppWrapper,
@@ -14,4 +15,5 @@ export {
   Nav,
   NavLinks,
   Button,
+  ImageContainer
 };

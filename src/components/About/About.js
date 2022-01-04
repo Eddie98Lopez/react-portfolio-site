@@ -1,7 +1,8 @@
 import React from "react";
-import { Section } from "../styled-components";
+import { Section, ImageContainer } from "../styled-components";
 import styles from './styles'
 import bio from './aboutCopy'
+import aboutMe from '../../assets/aboutMe.jpg'
 
 
 const About = (props) => {
@@ -12,7 +13,7 @@ const About = (props) => {
       <p>{bio}</p>
       </div>
 
-      <div className = 'img'></div>
+      <ImageContainer height="100%" width='auto' className = 'img'><img src={aboutMe} alt='bio_pic'/></ImageContainer>
     </Section>
   );
 };
