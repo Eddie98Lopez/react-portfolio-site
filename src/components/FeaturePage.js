@@ -62,8 +62,10 @@ const FeaturedWork = styled.div`
 
 const FeaturePage = () => {
   const { category,id } = useParams();
+  // eslint-disable-next-line
   const boop = illustrationGallery.filter((item) => item.id == id)[0];
   const quick = illustrationGallery.filter(
+      // eslint-disable-next-line
     (item) => item.collection === boop.collection && item.id != id
   );
 
