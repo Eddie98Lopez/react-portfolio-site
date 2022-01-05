@@ -17,7 +17,11 @@ function App() {
         <Navigation />
         <div className="right">
           <Routes>
-            <Route path="/:gallery" element={<Gallery />} />
+            <Route
+              path="/:category/:id"
+              element={<div>this will be a project feature page</div>}
+            />
+            <Route path="/:category" element={<Gallery />} />
             <Route exact path="/" element={<Home />} />
           </Routes>
         </div>

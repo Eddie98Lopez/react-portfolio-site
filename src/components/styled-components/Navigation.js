@@ -11,7 +11,7 @@ display: flex;
 flex-direction: column;
 justify-content:space-between;
 border-bottom: 2px solid ${props =>props.theme.colors.white};
-background:  ${props =>props.theme.colors.white};
+background:  rgba(0,0,0,.05);
 
 & div{
     width:100%;
@@ -66,11 +66,13 @@ export const NavLinks = styled.div`
 box-sizing:border-box;
 padding-bottom: 3rem;
 font-family: ${props=> props.theme.displayFont};
-color: ${props=> props.theme.colors.grey};
+color:${props=>props.theme.colors.black};
+
 
 & a{
     margin:.075rem 0;
     font-size: .85rem;
+
 }
 
 & div{
