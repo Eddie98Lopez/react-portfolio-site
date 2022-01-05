@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Section = styled.section`
   box-sizing: border-box;
-  padding: 0 5%;
+  padding:5%;
   width: 100%;
   position: relative;
   min-height: ${(props) => (props.height ? props.height : "80vh")};
@@ -23,7 +23,7 @@ const Section = styled.section`
 
   @media only screen and (max-width:768px){
     min-height:auto;
-    padding: 2rem;
+    padding:2.5%;
     margin:0;
   }
 `;

@@ -5,7 +5,7 @@ const AppWrapper = styled.div`
   display: grid;
   width: 100%;
   height: 100vh;
-  grid-template-columns: 0.75fr 2fr;
+  grid-template-columns: 0.57fr 2fr;
   grid-template-rows: 100%;
   overflow: hidden;
   position:relative;
@@ -25,21 +25,20 @@ const AppWrapper = styled.div`
   }
 
   @media only screen and (max-width:768px){
-    display:block;
-    height: 97vh;
+    display:flex;
+    flex-direction:column;
+    height: 100vh;
 
     & .left {
-      position:sticky;
-      z-index:5;
-
-      top:0px;
+      z-index:3;
+      background: ${props=>props.theme.colors.black};
     }
 
     & .right {
       box-sizing: border-box;
       background: #2c2c2c;
-      padding-bottom: 7rem;
-   
+      padding: 0;
+      padding-bottom:5rem;
     }
 
 
