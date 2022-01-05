@@ -23,7 +23,7 @@ const Wrapper = styled.div`
 `;
 
 export const QuickGallery = (props) => {
-  const { title, array, link } = props;
+  const { title, array } = props;
   return (
     <Wrapper>
       <h2>{title}</h2>

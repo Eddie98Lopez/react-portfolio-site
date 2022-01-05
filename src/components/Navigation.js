@@ -1,5 +1,5 @@
 import React, {useState,useEffect} from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Logo from "../assets/Logo";
 import { Nav, NavLinks } from "./styled-components";
 import { NavHashLink } from "react-router-hash-link";
