@@ -4,6 +4,7 @@ import Navigation from "./components/Navigation";
 import Home from "./components/Home";
 import { Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
+import FeaturePage from "./components/FeaturePage";
 import theme from "./utils/theme";
 import "./App.css";
 import Gallery from "./components/Gallery/Gallery";
@@ -19,7 +20,7 @@ function App() {
           <Routes>
             <Route
               path="/:category/:id"
-              element={<div>this will be a project feature page</div>}
+              element={<FeaturePage/>}
             />
             <Route path="/:category" element={<Gallery />} />
             <Route exact path="/" element={<Home />} />
