@@ -4,18 +4,16 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
   padding: 0 5%;
-
   ${(props) => props.theme.heading};
-
   & .images {
     display: grid;
     gap: 1rem;
-    grid-template-areas: "a a a a";
+    grid-template-columns: repeat(4,1fr);
 
     @media only screen and (max-width: 768px) {
-      grid-template-areas:
-        "a a"
-        "a a";
+      gap: 0.5rem;
+      padding: 0;
+      grid-template-columns:repeat(2,1fr);
     }
 
     & div {

@@ -1,7 +1,7 @@
-import styled from 'styled-components'
-
+import styled from "styled-components";
 
 const ImageContainer = styled.div`
+  position: relative;
 
     position: relative;
     box-shadow: 3px 3px 3px rgba(0,0,0,.17);
@@ -55,4 +55,4 @@ const ImageContainer = styled.div`
 
 `
 
-export default ImageContainer
+export default ImageContainer;
