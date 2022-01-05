@@ -1,6 +1,5 @@
 import React from 'react'
 import { illustrationGallery } from '../../assets/Illustration/illustrationGallery'
-import { ImageContainer } from '../styled-components'
 import GalleryThumb from './GalleryThumb'
 import { useParams } from 'react-router-dom'
 import styled from 'styled-components'

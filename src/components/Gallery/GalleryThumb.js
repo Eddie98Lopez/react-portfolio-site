@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react'
+import React from 'react'
 import { ImageContainer } from '../styled-components'
 import { useParams, useNavigate } from 'react-router-dom'
 

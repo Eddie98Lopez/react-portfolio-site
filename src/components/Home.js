@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 import Header from "./Header/Header";
 import About from "./About/About";
 import Contact from "./Contact/Contact";
-import {QuickGallery} from './Gallery'
+//import {QuickGallery} from './Gallery'
 import HeaderLettering from "./Header/HeaderLettering";
 
 const Home = () => {
