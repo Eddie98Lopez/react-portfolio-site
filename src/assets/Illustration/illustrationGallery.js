@@ -128,7 +128,7 @@ export const illustrationGallery = [
   {
     id: 15,
     title: "OG Muerte",
-    cover_photo: "1Lz2CzTQ_i-DG4IDqdqlVYKPK4rlO7Ic1",
+    cover_photo: 'https://i.ibb.co/rwwkzPw/Copy-of-Dia-De-Lost-Muertos-Poster-Art.jpg',
     description: "",
     alt: "",
     collection: "La Muerte",
