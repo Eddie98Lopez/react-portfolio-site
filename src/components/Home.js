@@ -17,10 +17,9 @@ const Home = () => {
       <Header/>
       <HeaderLettering/>
       
-      <QuickGallery
+{/*       <QuickGallery
         title="recent works"
-        array={['item','item','item','item']}
-        link='all work >'/>
+        array={['item','item','item','item']}/> */}
       <About/>
       <Contact/>
     </div>

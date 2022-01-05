@@ -32,7 +32,7 @@ export const QuickGallery = (props) => {
           <GalleryThumb project={item} />
         ))}
       </div>
-      <span>{link}</span>
+
     </Wrapper>
   );
 };

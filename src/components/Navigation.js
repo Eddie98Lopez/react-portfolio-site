@@ -9,11 +9,18 @@ import Hamburger from "../assets/hamburger";
 
 const Navigation = () => {
   const [mobile,setMobile] = useState(false)
+  const [hash,setHash]=useState('#top')
   const location = useLocation()
 
   useEffect(()=>{
     setMobile(false)
+    setHash(location.hash)
   },[location])
+
+  console.log(hash)
+
+
+  
 
 
   return (
@@ -28,17 +35,17 @@ const Navigation = () => {
       <div className="bottom" >
         <NavLinks>
           <div>
-            <NavHashLink smooth to="/#top">Home</NavHashLink>
-            <NavHashLink smooth to="/#about">
+            <NavHashLink smooth to="/#top" >Home</NavHashLink>
+            <NavHashLink smooth to="/#about" >
               About
             </NavHashLink>
-            <NavHashLink smooth to="/#contact">
+            <NavHashLink smooth to="/#contact" >
               Contact
             </NavHashLink>
           </div>
           <div>
-            <Link to="/illustration">illustration</Link>
-            <Link to="/web-dev">webdev</Link>
+            <NavHashLink to="/illustration" >illustration</NavHashLink>
+            <NavHashLink to="/web-dev" >webdev</NavHashLink>
           </div>
         </NavLinks>
         <SocialList list={socialsNav} className='social'/>

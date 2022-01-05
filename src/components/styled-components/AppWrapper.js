@@ -18,7 +18,7 @@ const AppWrapper = styled.div`
     overflow-x: hidden;
     height:100%;
     overflow-y: scroll;
-    background: #2c2c2c;
+    background: ${props=>props.theme.colors.black};
     &::-webkit-scrollbar {
       width: 3px;
     }
@@ -31,7 +31,7 @@ const AppWrapper = styled.div`
     & .left {
       position:sticky;
       z-index:5;
-      background:${props=>props.theme.colors.black};
+
       top:0px;
     }
 

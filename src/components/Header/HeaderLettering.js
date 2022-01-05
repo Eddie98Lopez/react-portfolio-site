@@ -14,7 +14,7 @@ position:absolute;
 z-index:12;
 top:20%;
 left: 1fr;
-transform: translateX(-33%);
+transform: translateX(-32.5%);
 
 & #h {grid-area:h};
 & #a {grid-area:a};
