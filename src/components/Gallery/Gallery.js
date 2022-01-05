@@ -29,7 +29,7 @@ const Gallery = () => {
 
     return (
         <GalleryContainer>
-            {category === 'illustration' && illustrationGallery.map(item=> <GalleryThumb item={item}/>)}
+            {category === 'illustration' && illustrationGallery.map(item=> <GalleryThumb item={item} key={item.id}/>)}
             {category === 'web-dev' && "This page is under construction"}
         </GalleryContainer>
     )
