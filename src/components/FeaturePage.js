@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { Section } from "./styled-components";
 import QuickGallery from "./Gallery/QuickGallery";
 import { Helmet } from "react-helmet";
-const drive = "https://drive.google.com/uc?id=";
+
 
 const FeaturedWork = styled.div`
   display: grid;
@@ -76,7 +76,7 @@ const FeaturePage = () => {
         </Helmet>
       <FeaturedWork>
         <div className="img">
-          <img src={`${drive}${boop.cover_photo}`} alt={boop.title} />
+          <img src={boop.cover_photo} alt={boop.title} />
         </div>
         <div className="info">
           <h2>{boop.title}</h2>

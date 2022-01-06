@@ -11,7 +11,7 @@ const {category} = useParams()
     
 return (
     <ImageContainer height='100%' width='100%' className='imageContainer' narnia onClick={()=>navigate(`/${category}/${id}`)}>
-        <img src={`${drive}${cover_photo}&sz=w1100-h1100`}alt={title}/>
+        <img src={cover_photo}alt={title}/>
         <div className='info'>
         <h3>{title}</h3>
         </div>
