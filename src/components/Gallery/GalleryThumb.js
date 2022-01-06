@@ -2,7 +2,6 @@ import React from 'react'
 import { ImageContainer } from '../styled-components'
 import { useParams, useNavigate } from 'react-router-dom'
 
-const drive = 'https://drive.google.com/thumbnail?id='
 
 const GalleryThumb = (props) => {
 const {cover_photo, title, id} = props.project
