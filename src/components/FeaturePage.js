@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { useParams } from "react-router-dom";
 import { illustrationGallery } from "../assets/Illustration/illustrationGallery";
 import styled from "styled-components";
@@ -23,6 +23,8 @@ const FeaturedWork = styled.div`
       object-position:50% 0;
       width: inherit;
       height: inherit;
+      pointer-events: none;
+      user-select: none; 
     }
   }
   & .info {
@@ -68,6 +70,12 @@ const FeaturePage = () => {
       // eslint-disable-next-line
     (item) => item.collection === boop.collection && item.id != id
   );
+
+
+  useEffect(()=>{
+    const section = document.querySelector("section")
+    section.scrollIntoView({behavior:'smooth'})
+  },[id])
 
   return (
     <Section>
