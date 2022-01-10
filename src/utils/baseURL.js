@@ -1,5 +1,5 @@
-require('dotenv').config()
 
-const baseURL = process.env.BASE_URL || 'http://localhost:9000/api'
+
+const baseURL =  'https://lopezed-backend.herokuapp.com/api'
 
 export default baseURL
