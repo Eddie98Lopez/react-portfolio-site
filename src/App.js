@@ -12,6 +12,9 @@ import Gallery from "./components/Gallery/Gallery";
 /*<Helmet><title>Illustrator | Graphic Desiger | Eddie Lopez | Fresno CA</title>*/
 
 function App() {
+
+
+
   return (
     <ThemeProvider theme={theme}>
       <AppWrapper className="App">
