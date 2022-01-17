@@ -81,6 +81,7 @@ const FeaturePage = () => {
     <Section>
         <Helmet>
             <title>{boop.title} | {category} | Eddie Lopez</title>
+            <meta name='description' content={boop.description.slice(0,120)}/>
         </Helmet>
       <FeaturedWork>
         <div className="img">
