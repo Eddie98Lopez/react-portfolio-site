@@ -4,7 +4,6 @@ const SocialWrapper = styled.div`
   text-align: right;
   & a {
     margin: 0 0.25rem;
-    background: ${(props) => props.theme.colors.white};
 
     & svg {
       fill: #c9c9c9;

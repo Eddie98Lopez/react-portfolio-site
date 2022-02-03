@@ -5,9 +5,10 @@ const AppWrapper = styled.div`
   display: grid;
   width: 100%;
   height: 100vh;
-  grid-template-columns: 0.75fr 2fr;
+  grid-template-columns: 0.57fr 2fr;
   grid-template-rows: 100%;
   overflow: hidden;
+  position:relative;
 
   & .left {
     box-sizing: border-box;
@@ -15,11 +16,32 @@ const AppWrapper = styled.div`
   & .right {
     box-sizing: border-box;
     overflow-x: hidden;
+    height:100%;
     overflow-y: scroll;
-    background: #2c2c2c;
+    background: ${props=>props.theme.colors.black};
     &::-webkit-scrollbar {
       width: 3px;
     }
+  }
+
+  @media only screen and (max-width:768px){
+    display:flex;
+    flex-direction:column;
+    height: 100vh;
+
+    & .left {
+      z-index:3;
+      background: ${props=>props.theme.colors.black};
+    }
+
+    & .right {
+      box-sizing: border-box;
+      background: #2c2c2c;
+      padding: 0;
+      padding-bottom:5rem;
+    }
+
+
   }
 `;
 

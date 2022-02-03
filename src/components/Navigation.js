@@ -1,23 +1,36 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import Logo from "../assets/Logo";
 import { Nav, NavLinks } from "./styled-components";
 import { NavHashLink } from "react-router-hash-link";
 import SocialList from "./SocialList/SocialList";
 import { socialsNav } from "../utils";
+import Hamburger from "../assets/hamburger";
 
 const Navigation = () => {
+  const [mobile, setMobile] = useState(false);
+
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    setMobile(false);
+  }, [location]);
+
   return (
-    <Nav>
+    <Nav mobile={mobile} className="left">
       <div className="mobile">
-        <Logo />
-        <div>hamgurger on mobile</div>
+        <Logo onClick={() => navigate("/#top")} />
+
+        <Hamburger onClick={() => setMobile(!mobile)} />
       </div>
 
       <div className="bottom">
         <NavLinks>
           <div>
-            <NavHashLink smooth to="/#top">Home</NavHashLink>
+            <NavHashLink smooth to="/#top">
+              Home
+            </NavHashLink>
             <NavHashLink smooth to="/#about">
               About
             </NavHashLink>
@@ -26,12 +39,11 @@ const Navigation = () => {
             </NavHashLink>
           </div>
           <div>
-            <Link to="/illustration">illustration</Link>
-            <Link to="/web-dev">webdev</Link>
+            <NavHashLink to="/illustration">illustration</NavHashLink>
+            <NavHashLink to="/web-dev">webdev</NavHashLink>
           </div>
         </NavLinks>
-
-        <SocialList list={socialsNav}/>
+        <SocialList list={socialsNav} className="social" />
       </div>
     </Nav>
   );

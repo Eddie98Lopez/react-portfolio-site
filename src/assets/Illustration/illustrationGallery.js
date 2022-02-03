@@ -1,224 +1,150 @@
-//import narnia0 from '../Illustration/narnia/0-narnia.jpg'
-import narnia1 from '../Illustration/Narnia/1-narnia.jpg'
-import narnia2 from '../Illustration/Narnia/2-narnia.jpg'
-import narnia3 from '../Illustration/Narnia/3-narnia.jpg'
-import narnia4 from '../Illustration/Narnia/4-narnia.png'
-import narnia5 from '../Illustration/Narnia/5-narnia.png'
-import narnia6 from '../Illustration/Narnia/6-narnia.jpg'
-///
-import muerte0 from '../Illustration/LaMuerte/0-muerte.jpg'
-import muerte1 from '../Illustration/LaMuerte/1-muerte.jpg'
-import muerte2 from '../Illustration/LaMuerte/2-muerte.jpg'
-///
-import comic0 from '../Illustration/Comics/0-comics.jpg'
-import comic1 from '../Illustration/Comics/1-comics.jpg'
-import comic2 from '../Illustration/Comics/2-comics.jpg'
-import comic3 from '../Illustration/Comics/3-comics.jpg'
-import comic4 from '../Illustration/Comics/4-comics.jpg'
-///
-import folsom0 from '../Illustration/Folsom/0Folsom.jpg'
-import folsom1 from '../Illustration/Folsom/1Folsom.jpg'
-import folsom2 from '../Illustration/Folsom/2Folsom.jpg'
-import folsom3 from '../Illustration/Folsom/3Folsom.jpg'
-///
-import misc0 from '../Illustration/Misc/0misc.jpg'
-import misc1 from '../Illustration/Misc/1misc.jpg'
-import misc2 from '../Illustration/Misc/2misc.jpg'
 
 
-export const illustrationGallery ={
-
-    narnia:[ 
-        /* {
+export const illustrationGallery = [
+  /* {
         id:1,
         title: 'narnia Lettering',
         description: '',
-        src: narnia0,
+        cover_photo: narnia0,
         year: 2018,
         alt: '',
         collection: 'narnia'
 
     }, */
 
-    {id:2,
-    title: 'The Magicians Nephew',
-    src: narnia1,
-    description:'',
+  {
+    id: 1,
+    title: "The Magicians Nephew",
+    cover_photo: "https://live.staticflickr.com/65535/51802659569_91ddcd91bd_h.jpg",
+    description: "This was part of a series for my Illustration2 final in college. The assignment required we make a series of three. I went on to do more later.",
     year: 2018,
-    alt: '',
-    collection: 'narnia'},
+    alt: "",
+    collection: "narnia",
+  },
 
-    {
-    id:3,
-    title: 'The Lion the Witch and the Wardrobe',
-    src: narnia2,
-    description:'',
+  {
+    id: 2,
+    title: "The Lion the Witch and the Wardbrobe",
+    cover_photo: "https://live.staticflickr.com/65535/51803023120_59b4f97904_h.jpg",
+    description: "This is part of a series I did in college. The picture you see here isn't what I turned in though. I modified it as time passed and even hand-lettered the title; taking inspiration from the motion-picture title lettering and from title-lettering of the animated movie Anastasia.",
     year: 2018,
-    alt: '',
-    collection:'narnia'
-    },
+    alt: "",
+    collection: "narnia",
+  },
 
-    {
-        id:4,
-        title: "The Horse and His Boy",
-        src: narnia3,
-        description:'',
-        year: 2018,
-        alt: '',
-        collection: 'narnia'
-        },
-    
-    {
-        id: 5,
-        title: 'Prince Caspian',
-        src: narnia4,
-        description:',',
-        year : 2019,
-        alt: '',
-        collection: 'narnia'
+  {
+    id: 3,
+    title: "The Horse and His Boy",
+    cover_photo: "https://live.staticflickr.com/65535/51802659519_b5d426f5e7_h.jpg",
+    description: "3rd in the Chronicles of Narnia book series. My favorite book in the series I'd have to say.",
+    year: 2018,
+    alt: "",
+    collection: "narnia",
+  },
 
-        },
+  {
+    id: 4,
+    title: "Prince Caspian",
+    cover_photo: "https://live.staticflickr.com/65535/51802659474_31c8ea9938_h.jpg",
+    description: "This was the first of this series that I completed after college. Started the thumbnail in college didn't complete until afterwards though. Thought it would be fun to complete the set. Big fan of the movie.",
+    year: 2019,
+    alt: "",
+    collection: "narnia",
+  },
 
-    {
-        id: 6,
-        title: "The Voyage of the Dawn Treader",
-        src: narnia5,
-        description: '',
-        alt: '',
-        collection: 'narnia'
-    },
-    {
-        id:7,
-        title: "The Silver Chair",
-        src: narnia6,
-        alt:'',
-        description:'',
-        collection:'narnia'
-    }],
-    pride:[{
-        id:16,
-        title: 'Male Nude 1',
-        src: folsom0,
-        description: '',
-        alt: '',
-        collection: 'Pride',
-    },
-    {
-        id: 17,
-        title: 'Male Nude 2',
-        src: folsom1,
-        description: '',
-        alt: '',
-        collection: 'Pride'
-    },
-    {
-        id:18,
-        title: 'Male Nude 3',
-        src: folsom2,
-        description:'',
-        alt:'',
-        collection:'Pride'
-       },
-       {
-           id:19,
-           title: 'Male Nude 4',
-           src: folsom3,
-           description: '',
-           alt: '',
-           collection:'Pride'
-       }],
-    comics: [{
-        id:11,
-        title: "Human Torch",
-        src: comic0,
-        description:'',
-        alt:'',
-        collection: "Comic Book"
-
-    },
-    {
-        id:12 ,
-        title: 'Doctor Strange',
-        src: comic1,
-        description: '',
-        alt:'',
-        collection:"Comic Book"
-    },
-    {
-        id:13,
-        title: 'Storm',
-        src:comic2,
-        description:'',
-        alt:'',
-        collection:"Comic Book"
-    },
-    {
-        id: 14,
-        title: 'Venom',
-        src: comic3,
-        description:'',
-        alt:'',
-        collection: 'Comic Book'
-    },
-    {
-        id: 15,
-        title: 'Scarlet Witch',
-        src: comic4,
-        description: '',
-        alt: "",
-        collection: 'Comic Book'   
-     }],
-    misc:[{
-        id: 20,
-        title: 'BLM',
-        src: misc0,
-        description: '',
-        alt: '',
-        collection: 'Misc'
-
-    },
-    {
-        id:21,
-        title: 'Justice',
-        src: misc1,
-        description: ' ',
-        alt: '',
-        collection: 'Misc'
-    },
-    {
-        id: 22,
-        title: 'Drunk Love',
-        src: misc2,
-        description: '',
-        alt:'',
-        collection:'Misc'
-    }],
-    muerte:[{
-        id:8,
-        title: "Queen Muerte",
-        src: muerte0,
-        description: '',
-        alt: '',
-        collection: "La Muerte"
-    },
-    {
-        id: 9,
-        title:"OG Muerte",
-        src: muerte1,
-        description: '',
-        alt: '',
-        collection: 'La Muerte'
-    },
-    {
-        id:10,
-        title: "La Llorona",
-        src:muerte2,
-        description:'',
-        alt: '',
-        collection:'La Muerte'
-    }]
-
-}
-
-
-
+  {
+    id: 5,
+    title: "The Voyage of the Dawn Treader",
+    cover_photo: "https://live.staticflickr.com/65535/51801347457_6cd35e7177_h.jpg",
+    description: "Oof I had to get a lot of reference images from both of the movies for the boat silhouette. A lot of people don't know the new movies are actually reboots. I remember renting the old movies from my local library as a kid.",
+    alt: "",
+    collection: "narnia",
+  },
+  {
+    id: 6,
+    title: "The Silver Chair",
+    cover_photo: "https://live.staticflickr.com/65535/51803022975_364080ed56_h.jpg",
+    alt: "",
+    description: "This one is the latest in the series that I've done a cover for. I'd also have to say it's my favorite. Loved the snake. Stylistically these covers are simplistic but this one was a challenge as to figuring what should be a silhouette are what should be colored in. ",
+    collection: "narnia",
+  },
+  {
+    id: 7,
+    title: "Male Nude 1",
+    cover_photo: "https://live.staticflickr.com/65535/51802419283_0f2ad25a8c_h.jpg",
+    description: "This is the first in this series. Initially, I was inspired to try a new coloring method on anatomy studies and then it grew into an entire homo-erotic series. The human form is beautiful. One of my favorite parts of art school was when we held a drawing with a live model.",
+    alt: "",
+    collection: "Pride",
+  },
+  {
+    id: 8,
+    title: "Male Nude 2",
+    cover_photo: "https://live.staticflickr.com/65535/51803022750_72803e205b_h.jpg",
+    description: "After creating this piece I realized I wanted to create a small series. It has art-pop aesthetic inspiration and influences as seen with the color variations of the negative and positive shapes. The colors were meant to mirror the pride flag colors.",
+    alt: "",
+    collection: "Pride",
+  },
+  {
+    id: 9,
+    title: "Male Nude 3",
+    cover_photo: "https://live.staticflickr.com/65535/51802659224_b67db6fa99_h.jpg",
+    description: "",
+    alt: "",
+    collection: "Pride",
+  },
+  {
+    id: 10,
+    title: "Male Nude 4",
+    cover_photo: "https://live.staticflickr.com/65535/51801347252_8d0d4bcfb3_h.jpg",
+    description: "",
+    alt: "",
+    collection: "Pride",
+  },
+  {
+    id: 12,
+    title: "La Llorona",
+    cover_photo: "https://live.staticflickr.com/65535/51801345287_bc96449a7c_h.jpg",
+    description: "",
+    alt: "",
+    collection: "La Muerte",
+  },
+  {
+    id: 13,
+    title: "Queen Muerte",
+    cover_photo: "https://live.staticflickr.com/65535/51803021470_364836aa21_h.jpg",
+    description: "",
+    alt: "",
+    collection: "La Muerte",
+  },
+  {
+    id: 14,
+    title: "El Mariachi",
+    cover_photo: "https://live.staticflickr.com/65535/51802657259_c46c935382_h.jpg",
+    description: "Made this for dia de muertos of this year.",
+    alt: "",
+    year: 2021,
+    collection: "La Muerte",
+  },
+  {
+    id: 15,
+    title: "OG Muerte",
+    cover_photo: 'https://live.staticflickr.com/65535/51801345917_36f12e5f4c_h.jpg',
+    description: "",
+    alt: "",
+    collection: "La Muerte",
+  },
+  {
+    id: 16,
+    title: "Drunk In Love",
+    description:
+      "This started as just one piece then in grew into a cool beer label",
+    collection: "Design",
+    cover_photo: "https://live.staticflickr.com/65535/51801346982_4a8120a96b_h.jpg",
+    images: [
+      "1gw4h36le5P8woehicydhWal0vpiOx89i",
+      "1-mTKNEJxyo5gOVqfaHd6MlMqp13h7lHD",
+      "1zOkdkFef9ENR3dCOO5CAERMkXToOiDMO",
+      "1em4NrvCuIDnBs1Ov4MW6NDMKZ4t_XPGT",
+    ],
+  },
+];
