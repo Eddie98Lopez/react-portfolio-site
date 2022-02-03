@@ -1,21 +1,35 @@
-import React,{createContext,useEffect, useState} from 'react'
+import React,{createContext,useContext, useState} from 'react'
+import rootReducer from './reducer'
+
 
 const StoreContext = createContext()
+const useStore = () => useContext(StoreContext)
+
 const initialState = {
-    dialog: undefined,
+    dialog: {display:false, message: ''},
     projects:[],
-    error:undefined
+    error: null
 }
 
+
+
 const StoreProvider = (props) => {
-    const [state,setState] = useState(initialState)
+    const [store,setStore] = useState(initialState)
+    console.log(store)
+
+    const dispatch=(action)=>{
+        setStore(rootReducer(store,action))
+    }
 
 
     return (
-        <StoreContext.Provider>
+        <StoreContext.Provider value={{store,dispatch}}>
             {props.children}
         </StoreContext.Provider>
     )
 }
 
-export default StoreProvider
+
+
+
+export {useStore, StoreProvider}
