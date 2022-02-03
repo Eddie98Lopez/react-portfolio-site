@@ -9,6 +9,7 @@ import theme from "./utils/theme";
 import "./App.css";
 import Gallery from "./components/Gallery/Gallery";
 import DialogBox from "./components/DialogBox";
+import UnderConstruction from "./components/UnderConstruction";
 
 /*<Helmet><title>Illustrator | Graphic Desiger | Eddie Lopez | Fresno CA</title>*/
 
@@ -28,6 +29,7 @@ function App() {
               element={<FeaturePage/>}
             />
             <Route path="/:category" element={<Gallery />} />
+            <Route path="/web-dev" element={<UnderConstruction />} />
             <Route exact path="/" element={<Home />} />
           </Routes>
         </div>

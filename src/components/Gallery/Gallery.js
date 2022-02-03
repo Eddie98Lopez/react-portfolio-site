@@ -4,6 +4,7 @@ import GalleryThumb from './GalleryThumb'
 import { useParams } from 'react-router-dom'
 import styled from 'styled-components'
 import {Helmet} from 'react-helmet'
+import UnderConstruction from '../UnderConstruction'
 
 const GalleryContainer = styled.div`
 padding: 5%;
@@ -33,7 +34,7 @@ const Gallery = () => {
                 <title>{category} | Eddie Lopez </title>
             </Helmet>
             {category === 'illustration' && illustrationGallery.map(item=> <GalleryThumb project={item} key={item.id}/>)}
-            {category === 'web-dev' && "This page is under construction"}
+            {category === 'web-dev' && <UnderConstruction/>}
         </GalleryContainer>
     )
 }
