@@ -4,8 +4,10 @@ import axios from "axios";
 import * as Yup from "yup";
 import { schema, baseURL } from "../../utils";
 import Input from "../Input";
+import { useStore } from "../../utils/store/StoreProvider";
 
 const ContactForm = (props) => {
+  const {dispatch} = useStore()
   const initialCreds = {
     first: "",
     last: "",
@@ -43,7 +45,9 @@ const ContactForm = (props) => {
 
     axios
       .post(`${baseURL}/messages`, values)
-      .then((res) => console.log(res))
+      .then((res) => {
+        dispatch({type:'SENT_MESSAGE'})
+      })
       .catch((err) => console.log(err));
     setValues(initialCreds);
   };
