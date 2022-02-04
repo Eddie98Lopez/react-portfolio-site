@@ -26,19 +26,24 @@ grid-template-areas:
   gap: 2rem;
 
   grid-template-areas: 
-'i a'
+  'i'
+  'a'
 
 ;
 & .img{
   background:white;
-  width:10rem;
-  height: 10rem;
+  width:100%;
+  height: auto;
   grid-area: i;
+  
+  & img{
+    object-position: top;
+  }
   
 }
 
 
 }
-`
+`;
 
-export default styles
+export default styles;
