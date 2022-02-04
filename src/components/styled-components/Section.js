@@ -23,7 +23,6 @@ const Section = styled.section`
 
   @media only screen and (max-width:768px){
     min-height:auto;
-    padding:2.5%;
     margin:0;
   }
 `;
