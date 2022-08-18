@@ -3,11 +3,10 @@ import GalleryThumb from "./GalleryThumb";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  padding: 5% 0;
+  padding: 0% 5% 5% 5% ;
 
-  & .title {
-    ${(props) => props.theme.heading};
-  }
+  ${(props) => props.theme.heading};
+
 
   & .images {
     display: grid;
