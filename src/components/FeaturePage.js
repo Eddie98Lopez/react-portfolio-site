@@ -1,101 +1,52 @@
-import React, {useEffect} from "react";
+import React, { useEffect, useState, createContext,useContext } from "react";
 import { useParams } from "react-router-dom";
-import { illustrationGallery } from "../assets/Illustration/illustrationGallery";
-import styled from "styled-components";
+
+
 import { Section } from "./styled-components";
 import QuickGallery from "./Gallery/QuickGallery";
 import { Helmet } from "react-helmet";
+import { useStore } from "../utils/store/StoreProvider";
+import { getProjectById, supabase } from "../utils/supabase";
+import ProjectDetails from "./ProjectDetails/ProjectDetails";
 
-
-const FeaturedWork = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap:1.5rem;
-  height: auto;
-  & .img {
-    box-sizing: border-box;
-    width: 100%;
-    height: auto;
-
-    & img {
-      box-sizing: border-box;
-      object-fit: contain;
-      object-position:50% 0;
-      width: inherit;
-      height: inherit;
-      pointer-events: none;
-      user-select: none; 
-    }
-  }
-  & .info {
-    width: 1fr;
-    overflow-wrap: break-word;
-    padding-top:40%;
-
-    & h2 {
-      width: 60%;
-      font-size: 1.5rem;
-      color: ${props=>props.theme.colors.grey};
-    }
-
-    & p {
-      overflow-wrap: break-word;
-      width: 100%;
-      font-size: 1rem;
-      color: lightgrey;
-    }
-  }
-
-  @media only screen and (max-width:768px){
-    grid-template-columns: 100%;
-    & .img {
-        box-sizing: border-box;
-        width: 100%;
-        height: 60vh;}
-    & .info {
-        width: 1fr;
-        overflow-wrap: break-word;
-        padding-top:0;}
-
-  }
-`;
-
+const ProjectContext = createContext()
+export const useProject = ()=>useContext(ProjectContext)
 
 
 const FeaturePage = () => {
-  const { category,id } = useParams();
-  // eslint-disable-next-line
-  const boop = illustrationGallery.filter((item) => item.id == id)[0];
-  const quick = illustrationGallery.filter(
-      // eslint-disable-next-line
-    (item) => item.collection === boop.collection && item.id != id
-  );
+  const { id } = useParams();
+  const { projects } = useStore().store;
+  const [project, setProject] = useState(false);
 
 
-  useEffect(()=>{
-    const section = document.querySelector("section")
-    section.scrollIntoView({behavior:'smooth'})
-  },[id])
+  useEffect( () => {
+    getProjectById(id)
+    .then(res=> {console.log(res);setProject(res)})
+    .catch(err=>console.log(err))
+    
+  }, [id]);
+
+  useEffect(() => {
+    const section = document.querySelector("section");
+    section.scrollIntoView({ behavior: "smooth" });
+  }, [project]);
 
   return (
+    <>
     <Section>
-        <Helmet>
-            <title>{boop.title} | {category} | Eddie Lopez</title>
-            <meta name='description' content={boop.description.slice(0,120)}/>
-        </Helmet>
-      <FeaturedWork>
-        <div className="img">
-          <img src={boop.cover_photo} alt={boop.title} />
-        </div>
-        <div className="info">
-          <h2>{boop.title}</h2>
-          <hr/>
-          <p>{boop.description}</p>
-        </div>
-      </FeaturedWork>
+      <Helmet>
+        <title>
+          {project.title || ''} | {project.library || ''} | Eddie Lopez
+        </title>
+        <meta name="description" content={project.description || ''} />
+      </Helmet>
+      {project && <ProjectDetails project={project}/>}
 
-      <QuickGallery array={quick} title="Similar Works" className="qg" />
+      
     </Section>
+    <QuickGallery array={project!= {} && projects.filter(item=>item.id != id)} title="Similar Works" />
+    </>
+   
   );
 };
 

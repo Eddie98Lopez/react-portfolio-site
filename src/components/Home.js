@@ -3,11 +3,13 @@ import { Helmet } from "react-helmet";
 import Header from "./Header/Header";
 import About from "./About/About";
 import Contact from "./Contact/Contact";
-//import {QuickGallery} from './Gallery'
+import {QuickGallery} from './Gallery'
 import HeaderLettering from "./Header/HeaderLettering";
 import { keywords } from "../utils";
+import { useStore } from "../utils/store/StoreProvider";
 
 const Home = () => {
+  const {projects} = useStore().store
   return (
     <div>
       <Helmet>
@@ -20,9 +22,9 @@ const Home = () => {
       <Header/>
       <HeaderLettering/>
       
-{/*       <QuickGallery
+      {projects.length>0 && (<QuickGallery
         title="recent works"
-        array={['item','item','item','item']}/> */}
+        array={projects}/>)}
       <About/>
       <Contact/>
     </div>
