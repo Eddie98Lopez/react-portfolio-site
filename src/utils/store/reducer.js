@@ -1,7 +1,11 @@
 const rootReducer = (state, action) => {
   switch (action.type) {
     case "FETCH_PROJECTS":
-      return { ...state, projects: action.payload };
+      return { ...state, projects: action.payload, loading:false };
+    case "SET_LOAD_FALSE":
+      return {...state, loading:false}
+    case "LOAD": 
+      return {...state, loading:true}
     case "SENT_MESSAGE":
       return {
         ...state,

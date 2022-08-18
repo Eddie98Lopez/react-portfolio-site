@@ -7,6 +7,7 @@ const useStore = () => useContext(StoreContext);
 
 const initialState = {
   dialog: { display: false, message: "" },
+  loading: true,
   projects: [],
   error: null,
 };
@@ -18,12 +19,7 @@ const StoreProvider = (props) => {
   };
 
   useEffect(() => {
-    getProjects().then((res) => {
-      dispatch({type:'FETCH_PROJECTS', payload:res})
-      console.log(store);
-    })
-    .catch(err=> console.log(err));
-    
+    getProjects(dispatch);
   }, []);
 
   return (

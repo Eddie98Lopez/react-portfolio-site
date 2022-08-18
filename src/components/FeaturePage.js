@@ -16,13 +16,13 @@ export const useProject = ()=>useContext(ProjectContext)
 const FeaturePage = () => {
   const { id } = useParams();
   const { projects } = useStore().store;
+  const {dispatch}= useStore()
   const [project, setProject] = useState(false);
 
 
   useEffect( () => {
-    getProjectById(id)
-    .then(res=> {console.log(res);setProject(res)})
-    .catch(err=>console.log(err))
+    getProjectById(id,dispatch,setProject)
+
     
   }, [id]);
 
