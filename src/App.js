@@ -10,6 +10,7 @@ import "./App.css";
 import Gallery from "./components/Gallery/Gallery";
 import DialogBox from "./components/DialogBox";
 import UnderConstruction from "./components/UnderConstruction";
+import Loading from "./components/Loading";
 
 /*<Helmet><title>Illustrator | Graphic Desiger | Eddie Lopez | Fresno CA</title>*/
 
@@ -19,6 +20,7 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
+      <Loading/>
       <DialogBox/>
       <AppWrapper className="App">
         <Navigation />
@@ -30,6 +32,7 @@ function App() {
             />
             
             <Route path="/portfolio" element={<Gallery/>} />
+      
             <Route exact path="/" element={<Home />} />
           </Routes>
         </div>

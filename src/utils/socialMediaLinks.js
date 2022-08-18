@@ -6,6 +6,6 @@ export const socialsNav = [
   { type: "github", href: "https://github.com/Eddie98Lopez" },
   {
     type: "instagram",
-    href: "https://www.instagram.com/eddielopez_art/",
+    href: "https://www.instagram.com/98lopezed/",
   },
 ];
