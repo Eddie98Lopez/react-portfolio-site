@@ -45,6 +45,7 @@ padding-top:30%;
     @media only screen and (max-width:768px){
         max-height:auto;
         overflow-y:visible;
+        font-size:1.05rem;
     }
 
 }
