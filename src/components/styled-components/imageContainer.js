@@ -34,17 +34,21 @@ const ImageContainer = styled.div`
       display:flex;
       flex-direction:column;
       align-items:center;
-      gap:1rem;
+      gap:.5rem;
       justify-content:center;
       & h2,h3{
         display:block;
         text-align:center;
         color: white;
-        font-family: roboto,sans-serif;
-        font-weight: bold;
+        font-family: ${props=>props.theme.displayFont};
+        font-weight: normal;
         font-size:2rem;
     }
     & h3{font-size:1rem;
+      font-family: roboto, sans-serif;
+      text-transform: uppercase;
+      color: grey;
+      letter-spacing: 5px;
         font-weight:400}
     }
 

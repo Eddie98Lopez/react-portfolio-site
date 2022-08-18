@@ -27,7 +27,7 @@ const Navigation = () => {
 
       <div className="bottom">
         <NavLinks>
-          <div>
+          <div className='main-links'>
             <NavHashLink smooth to="/#top">
               Home
             </NavHashLink>
@@ -40,7 +40,7 @@ const Navigation = () => {
             
           </div>
           <div>
-          <NavHashLink to="/portfolio">portfolio</NavHashLink>
+          <NavHashLink to="/portfolio" className="portfolio">portfolio</NavHashLink>
           </div>
         </NavLinks>
         <SocialList list={socialsNav} className="social" />

@@ -84,6 +84,31 @@ export const NavLinks = styled.div`
     align-items: flex-end;
   }
 
+  & .main-links{
+
+    & a {
+      transition: .2s ease-in-out;
+
+      &:hover{
+        transition: .2s ease-in-out;
+        transform:translate(-10px,0);
+        color: darkgrey;
+      }
+    }
+  }
+
+  & .portfolio{
+    transition: .2s ease-in-out;
+
+    &:hover{
+      transition: .2s ease-in-out;
+      transform:translate(-10px,0);
+      font-size:1.3rem;
+      color: darkgrey;
+    }
+    
+  }
+
   @media only screen and (max-width: 768px) {
     padding: 0;
     & a {
