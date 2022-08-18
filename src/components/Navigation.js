@@ -37,10 +37,10 @@ const Navigation = () => {
             <NavHashLink smooth to="/#contact">
               Contact
             </NavHashLink>
+            
           </div>
           <div>
-            <NavHashLink to="/illustration">illustration</NavHashLink>
-            <NavHashLink to="/web-dev">webdev</NavHashLink>
+          <NavHashLink to="/portfolio">portfolio</NavHashLink>
           </div>
         </NavLinks>
         <SocialList list={socialsNav} className="social" />

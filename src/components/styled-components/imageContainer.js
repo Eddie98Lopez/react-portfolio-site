@@ -17,26 +17,37 @@ const ImageContainer = styled.div`
     z-index: 1;
     position: absolute;
     padding: 1rem;
-    height: 7rem;
+    height: 100%;
     width: 100%;
-    background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0),
-      rgba(0, 0, 0, 0.7),
-      black
-    );
+    background: rgba(0,0,0,.6);
+    backdrop-filter: blur(2px);
     left: 0px;
     bottom: 0px;
     opacity: 0;
     transition: 0.3s ease-in-out;
-    & h2,h3{
-        position: absolute;
-        top:40%;
+   
+
+    & div{
+      width:100%;
+      height:100%;
+      
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:1rem;
+      justify-content:center;
+      & h2,h3{
+        display:block;
+        text-align:center;
         color: white;
         font-family: roboto,sans-serif;
         font-weight: bold;
-        font-size:1.15rem;
+        font-size:2rem;
     }
+    & h3{font-size:1rem;
+        font-weight:400}
+    }
+
   }
 
   & img {
@@ -61,6 +72,7 @@ const ImageContainer = styled.div`
     & .info {
       transition: 0.3s ease-in-out;
       opacity: 1;
+      height:100%;
     }
   }
 `;

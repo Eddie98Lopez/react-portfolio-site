@@ -25,11 +25,11 @@ function App() {
         <div className="right">
           <Routes>
             <Route
-              path="/:category/:id"
+              path="/portfolio/:id"
               element={<FeaturePage/>}
             />
-            <Route path="/:category" element={<Gallery />} />
-            <Route path="/web-dev" element={<UnderConstruction />} />
+            
+            <Route path="/portfolio" element={<Gallery/>} />
             <Route exact path="/" element={<Home />} />
           </Routes>
         </div>
