@@ -9,12 +9,13 @@ const ProjectWrap = styled.section`;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
+  position:relative;
  
 
   @media only screen and (max-width: 768px) {
     grid-template-columns: 100%;
     grid-template-rows:auto;
-    padding: 5%;
+    padding: 2.5%;
   }
 `;
 

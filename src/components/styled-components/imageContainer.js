@@ -20,7 +20,7 @@ const ImageContainer = styled.div`
     height: 100%;
     width: 100%;
     background: rgba(0,0,0,.6);
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(3px);
     left: 0px;
     bottom: 0px;
     opacity: 0;

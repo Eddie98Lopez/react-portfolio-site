@@ -11,7 +11,7 @@ const ImgThumbs = styled.div`
     content: " ";
     display: block;
     width: 100%;
-    padding-top: 50%;
+    padding-top: 100%;
   }
 
   & img {

@@ -2,6 +2,9 @@ import styled from 'styled-components'
 
 const ProjectInfo = styled.div`
 box-sizing:border-box;
+position:relative;
+padding-top:30%;
+
 & >*{
     margin-bottom:2rem;
 }
@@ -32,7 +35,7 @@ box-sizing:border-box;
 
 & p{
     
-    font-family: roboto;
+    font-family: roboto, sans-serif;
     color: grey;
     font-style:normal;
     font-size:.96rem;
@@ -44,6 +47,11 @@ box-sizing:border-box;
         overflow-y:visible;
     }
 
-}`
+}
+@media only screen and (max-width:768px){
+    padding-top:0;
+}
+`
+
 
 export default ProjectInfo
