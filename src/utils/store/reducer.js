@@ -11,12 +11,6 @@ const rootReducer = (state, action) => {
             "Thank You. Your message was sent. I will get back to you shortly.",
         },
       };
-    case "FETCH_ERROR":
-      return {...state,
-      dialog:{
-        display:true,
-        message: 'Loading error. Please try refreshing'
-      }}
     case "CLOSE_DIALOG":
       return { ...state, dialog: { display: false, message: "" } };
 

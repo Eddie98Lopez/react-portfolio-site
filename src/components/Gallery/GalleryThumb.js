@@ -1,21 +1,18 @@
 import React from 'react'
 import { ImageContainer } from '../styled-components'
-import { useNavigate } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 
 
 const GalleryThumb = (props) => {
-const { cover_image,title, id, library} = props.project
+const {cover_photo, title, id} = props.project
 const navigate = useNavigate()
-
+const {category} = useParams()
     
 return (
-    <ImageContainer height='100%' width='100%' className='imageContainer' narnia onClick={()=>navigate(`/portfolio/${id}`)}>
-        <img src={cover_image} alt={title}/>
+    <ImageContainer height='100%' width='100%' className='imageContainer' narnia onClick={()=>navigate(`/${category}/${id}`)}>
+        <img src={cover_photo}alt={title}/>
         <div className='info'>
-        <div>
-        <h2>{title}</h2>
-        <h3>{library}</h3>
-        </div>
+        <h3>{title}</h3>
         </div>
     </ImageContainer>)
 }
