@@ -26,12 +26,14 @@ function App() {
         <Navigation />
         <div className="right">
           <Routes>
-            <Route
-              path="/portfolio/:id"
+
+          <Route
+              path="/portfolio/:library/:id"
               element={<FeaturePage/>}
             />
-            
-            <Route path="/portfolio" element={<Gallery/>} />
+            <Route path="/portfolio" element={<Gallery/>}>
+     
+            </Route>
       
             <Route exact path="/" element={<Home />} />
           </Routes>

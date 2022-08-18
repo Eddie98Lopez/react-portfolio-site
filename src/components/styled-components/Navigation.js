@@ -7,8 +7,11 @@ export const Nav = styled.nav`
   padding: 2rem 1rem;
   position: relative;
   display: flex;
+
+
   flex-direction: column;
   justify-content: space-between;
+  align-items:baseline;
   border-bottom: 2px solid ${(props) => props.theme.colors.white};
   background: rgba(0, 0, 0, 0.05);
 

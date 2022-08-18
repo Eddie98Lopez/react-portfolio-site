@@ -11,7 +11,7 @@ const {dispatch} = useStore()
 
 const handleClick = ()=>{
     dispatch({type:'LOAD'})
-    navigate(`/portfolio/${id}`)
+    navigate(`/portfolio/${library}/${id}`)
 
 }
 
