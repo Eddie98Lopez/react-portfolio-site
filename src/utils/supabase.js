@@ -9,7 +9,7 @@ export const getProjects = async (dispatch) => {
     let projects = await supabase.from("projects").select("*");
     setTimeout(()=>{
       dispatch({type:'FETCH_PROJECTS', payload:projects.data})
-    },2000)
+    },3500)
     
   } catch (error) {
     console.log(error);

@@ -79,6 +79,20 @@ const ImageContainer = styled.div`
       height:100%;
     }
   }
+
+  @keyframes enter{
+    0%{
+      opacity:0;
+      transform:translateY(15px)
+    }
+    100%{
+      opacity:1;
+      transform:translateY(0)
+    }
+  }
+
+  animation-name: enter;
+  animation-duration: ${props=>props.duration}s;
 `;
 
 export default ImageContainer;

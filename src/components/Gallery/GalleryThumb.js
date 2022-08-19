@@ -15,9 +15,10 @@ const handleClick = ()=>{
 
 }
 
+
     
 return (
-    <ImageContainer height='100%' width='100%' className='imageContainer' narnia onClick={handleClick}>
+    <ImageContainer height='100%' width='100%' className='imageContainer' narnia onClick={handleClick} duration={Math.random() * 2}>
         <img src={cover_image} alt={title}/>
         <div className='info'>
         <div>
