@@ -7,8 +7,9 @@ import { useProject } from "../FeaturePage";
 
 const ProjectWrap = styled.section`;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  height: 80vh;
+  grid-template-columns: 1.5fr 1fr ;
+  gap: 3rem;
   position:relative;
  
 

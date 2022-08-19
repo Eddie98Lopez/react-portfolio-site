@@ -16,15 +16,30 @@ export const getProjects = async (dispatch) => {
   }
 };
 
-export const getProjectById = async (id,dispatch,setProject) => {
-
+export const getProjectById = async (project,id,dispatch,setProject) => {
   try {
-    const project = await supabase.from('projects').select('*').eq('id', id)
-    console.log(project)
-    const projectPhotos = await supabase.from('projects_to_images').select('*').eq('project_id',id)
-    console.log(projectPhotos)
-   setProject( {...project.data[0],images:projectPhotos.data})
-   dispatch({type:'SET_LOAD_FALSE'})
+  
+
+    if (!project){
+      
+      const fetchedProject = await supabase.from('projects').select('*').eq('id', id)
+      const projectPhotos = await supabase.from('projects_to_images').select('*').eq('project_id',id)
+      const sorted = projectPhotos.data.sort((a, b) => a.index - b.index)
+      console.log('Fetched project and images')
+      setProject( {...fetchedProject.data[0],images:sorted})
+      dispatch({type:'SET_LOAD_FALSE'})
+
+    }else{
+
+      const projectPhotos = await supabase.from('projects_to_images').select('*').eq('project_id',id)
+      const sorted = projectPhotos.data.sort((a, b) => a.index - b.index)
+      console.log('fetched only images')
+      setProject( {...project,images:sorted})
+      dispatch({type:'SET_LOAD_FALSE'})
+
+    }
+
+
     
   } catch (error) {
     console.log(error)

@@ -47,7 +47,7 @@ const ImageContainer = styled.div`
     & h3{font-size:1rem;
       font-family: roboto, sans-serif;
       text-transform: uppercase;
-      color: grey;
+      color: lightgray;
       letter-spacing: 5px;
         font-weight:400}
     }
@@ -64,10 +64,7 @@ const ImageContainer = styled.div`
     width: 100%;
     height: 100%;
     object-fit: cover;
-    ${(props) =>
-      props.narnia &&
-      `
-     object-position: 50% 35%;`}
+
   }
 
   &:hover {

@@ -15,14 +15,13 @@ export const useProject = ()=>useContext(ProjectContext)
 
 const FeaturePage = () => {
   const { id } = useParams();
-  const { projects } = useStore().store;
+  const { projects,loading } = useStore().store;
   const {dispatch}= useStore()
-  const [project, setProject] = useState(false);
+  const [project, setProject] = useState(projects.filter(item => item.id === Number(id))[0]);
 
 
   useEffect( () => {
-    getProjectById(id,dispatch,setProject)
-
+    getProjectById(project,id,dispatch,setProject)
     
   }, [id]);
 
@@ -34,17 +33,12 @@ const FeaturePage = () => {
   return (
     <>
     <Section>
-      <Helmet>
-        <title>
-          {project.title || ''} | {project.library || ''} | Eddie Lopez
-        </title>
-        <meta name="description" content={project.description || ''} />
-      </Helmet>
-      {project && <ProjectDetails project={project}/>}
+
+      {!loading && <ProjectDetails project={project}/>}
 
       
     </Section>
-    <QuickGallery array={project!= {} && projects.filter(item=>item.id != id)} title="Similar Works" />
+    <QuickGallery array={!loading!= {} && projects.filter(item=>item.id != id && item.library == project.library)} title="Similar Works" />
     </>
    
   );

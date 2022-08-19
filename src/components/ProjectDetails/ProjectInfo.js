@@ -36,7 +36,7 @@ padding-top:30%;
 & p{
     
     font-family: roboto, sans-serif;
-    color: grey;
+    color: lightgrey;
     font-style:normal;
     font-size:.96rem;
     font-weight: 300;

@@ -46,7 +46,7 @@ const Images = styled.div`
       content: " ";
       display: block;
       width: 100%;
-      padding-top: 90%;
+      padding-top: 75%;
     }
 
     & img {
@@ -120,24 +120,26 @@ const Images = styled.div`
     }
   }
 
+  grid-template-columns: none;
+  grid-template-areas: "a" "b";
+
+  & .gallery {
+    width:70px;
+    height:70px;
+  }
+
+  & .b {
+    grid-area: b;
+    grid-template-columns: repeat(4, 70px);
+    grid-auto-rows: 70px;
+  }
+
+  & .a {
+    grid-area: a;
+  }
+
   @media only screen and (max-width: 768px) {
-    grid-template-columns: none;
-    grid-template-areas: "a" "b";
 
-    & .gallery {
-      width:70px;
-      height:70px;
-    }
-
-    & .b {
-      grid-area: b;
-      grid-template-columns: repeat(4, 70px);
-      grid-auto-rows: 70px;
-    }
-
-    & .a {
-      grid-area: a;
-    }
   }
 
   @media only screen and (max-width: 345px) {
@@ -163,6 +165,7 @@ const Images = styled.div`
 
 const ProjectImages = (props) => {
   const {images} = props
+  console.log(images)
   
   const [active,setActive] = useState({})
   const [fullScreen,setFullScreen] = useState(false)
