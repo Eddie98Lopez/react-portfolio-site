@@ -40,7 +40,11 @@ export const Nav = styled.nav`
 
     & .bottom {
       box-sizing: border-box;
-      display: ${(props) => (props.mobile === true ? "flex" : "none")};
+      display: flex;
+      transition: .3s ease-in-out;
+      overflow: hidden;
+
+      height: ${(props) => (props.mobile === true ? '17rem' : "0")}
     }
 
     & .mobile {
