@@ -17,15 +17,16 @@ const GalleryContainer = styled.div`
 `;
 
 const Gallery = () => {
-  const { store } = useStore();
+  const { projects } = useStore().store;
+  const sorted = projects.sort((a,b)=> Date.parse(b.created_at) - Date.parse(a.created_at))
 
   return (
     <GalleryContainer>
       <Helmet>
         <title> | Eddie Lopez </title>
       </Helmet>
-      {store.projects.map((item) => (
-        <GalleryThumb key={item.id} project={item} />
+      {sorted.map((item) => (
+        <GalleryThumb key={Math.floor(Math.random()*10000000)} project={item} />
       ))}
     </GalleryContainer>
   );

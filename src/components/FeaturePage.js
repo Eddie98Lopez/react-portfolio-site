@@ -17,11 +17,12 @@ const FeaturePage = () => {
   const { id } = useParams();
   const { projects,loading } = useStore().store;
   const {dispatch}= useStore()
-  const [project, setProject] = useState(projects.filter(item => item.id === Number(id))[0]);
+  const [project, setProject] = useState({});
 
 
   useEffect( () => {
-    getProjectById(project,id,dispatch,setProject)
+  
+    getProjectById(projects.filter(item => item.id === Number(id))[0],id,dispatch,setProject)
     
   }, [id]);
 
