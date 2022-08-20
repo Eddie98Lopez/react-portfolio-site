@@ -80,16 +80,31 @@ const ImageContainer = styled.div`
   @keyframes enter{
     0%{
       opacity:0;
-      transform:translateY(15px)
+      transform:translateY(15px);
+
+      & img{
+        filter:blur(15px)
+      }
     }
     100%{
       opacity:1;
-      transform:translateY(0)
+      transform:translateY(0);
+      & img{
+        filter:blur(15px)
+      }
     }
+
   }
 
   animation-name: enter;
   animation-duration: ${props=>props.duration}s;
+
+  @media only screen and (max-width:768px){
+
+    & .info {
+      display:none;
+    }
+  }
 `;
 
 export default ImageContainer;

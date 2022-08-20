@@ -1,17 +1,58 @@
-import React from 'react'
+import React from "react";
+import styled from "styled-components";
+
+const DIV = styled.div`
+  height: 40px;
+  
+  width: 40px;
+  position: relative;
+  box-sizing: border-box;
+
+
+  & div {
+    transition: all 0.3s ease-in-out;
+    box-sizing: border-box;
+    transform-origin: center;
+    background: white;
+    width: 40px;
+    height: 5px;
+    border-radius: 2px;
+ 
+    
+  }
+
+  ${(props) =>
+    props.mobile &&
+    `
+& #Rectangle_9{
+  
+  transform: rotate(-135deg);
+  position:absolute;
+  
+};
+& #Rectangle_10{
+  opacity: 0;
+  
+  
+  height: 0px;
+  
+};
+& #Rectangle_11{
+  
+  transform: rotate(135deg);
+  position:absolute;
+  
+}`}
+`;
 
 const Hamburger = (props) => {
-    return (
-<svg xmlns="http://www.w3.org/2000/svg" width="40" height="29" viewBox="0 0 40 29" {...props} id='hamburger'>
-  <g id="Group_1" data-name="Group 1" transform="translate(-218.024 -360.5)">
-    <rect id="Rectangle_9" data-name="Rectangle 9" width="40" height='5' rx="3.5" transform="translate(218.024 360.5)" fill={props.fill}/>
-    <rect id="Rectangle_10" data-name="Rectangle 10" width="40" height='5' rx="3.5" transform="translate(218.024 371.5)" fill={props.fill}/>
-    <rect id="Rectangle_11" data-name="Rectangle 11" width="40" height='5' rx="3.5" transform="translate(218.024 382.5)" fill={props.fill}/>
-  </g>
-</svg>
+  return (
+    <DIV {...props} id="hamburger">
+      <div id="Rectangle_9" />
+      <div id="Rectangle_10" />
+      <div id="Rectangle_11" />
+    </DIV>
+  );
+};
 
-
-    )
-}
-
-export default Hamburger
+export default Hamburger;

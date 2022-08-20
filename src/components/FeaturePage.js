@@ -6,7 +6,7 @@ import { Section } from "./styled-components";
 import QuickGallery from "./Gallery/QuickGallery";
 import { Helmet } from "react-helmet";
 import { useStore } from "../utils/store/StoreProvider";
-import { getProjectById, supabase } from "../utils/supabase";
+import { getProjectById } from "../utils/supabase";
 import ProjectDetails from "./ProjectDetails/ProjectDetails";
 
 const ProjectContext = createContext()

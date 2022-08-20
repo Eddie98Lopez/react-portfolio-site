@@ -48,18 +48,24 @@ export const Nav = styled.nav`
     }
 
     & .mobile {
+      width: 100%;
+box-sizing:border-box;
       display: flex;
-      justify-content: space-between;
+      justify-content:space-between;
+      /* align-items: normal; */
+      
       fill: ${(props) => props.theme.colors.white};
 
-      & svg{
-        height: 35px;
-        width:auto;
-      }
+
       & #hamburger {
-        display: block;
-        height: 25px;
-        width:auto;
+        width:40px;
+        height:40px;
+        display: flex;
+        justify-content:center;
+        flex-direction:column;
+        gap: 7px;
+       
+      
       }
     }
 

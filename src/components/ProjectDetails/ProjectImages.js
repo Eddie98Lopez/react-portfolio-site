@@ -165,8 +165,6 @@ const Images = styled.div`
 
 const ProjectImages = (props) => {
   const {images} = props
-  console.log(images)
-  
   const [active,setActive] = useState({})
   const [fullScreen,setFullScreen] = useState(false)
 
@@ -192,7 +190,7 @@ const ProjectImages = (props) => {
             .filter((item) => images.indexOf(item) < 3)
             .map((item) => (
               <ImgThumbs
-                key={item}
+                key={Math.random()*1000000}
                 id={item}
                 active={active}
                 onClick={() => setActive(item)}

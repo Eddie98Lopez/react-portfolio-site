@@ -18,14 +18,6 @@ const GalleryContainer = styled.div`
 
 const Gallery = () => {
   const { store } = useStore();
-  console.log(store);
-  //const {category} = useParams()
-
-  /*
-    const {category} = useParams()
-    const gallery = useStore().projects.filter(item => item.category == category)
-
-    */
 
   return (
     <GalleryContainer>

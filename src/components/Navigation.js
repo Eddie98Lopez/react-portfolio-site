@@ -22,7 +22,7 @@ const Navigation = () => {
       <div className="mobile">
         <Logo onClick={() => navigate("/#top")} />
 
-        <Hamburger onClick={() => setMobile(!mobile)} />
+        <Hamburger onClick={() => setMobile(!mobile)} mobile={mobile}/>
       </div>
 
       <div className="bottom">

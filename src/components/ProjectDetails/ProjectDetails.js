@@ -16,6 +16,7 @@ const ProjectWrap = styled.section`;
   @media only screen and (max-width: 768px) {
     grid-template-columns: 100%;
     grid-template-rows:auto;
+    height: auto;
     padding: 2.5%;
   }
 `;
@@ -24,7 +25,6 @@ const ProjectWrap = styled.section`;
 const ProjectDetails = (props) => {
 
 const {title,description,images} = props.project
-console.log(images)
 
 return (
     <ProjectWrap>
