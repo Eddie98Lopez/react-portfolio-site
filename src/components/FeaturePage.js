@@ -39,7 +39,7 @@ const FeaturePage = () => {
 
       
     </Section>
-    <QuickGallery array={!loading!= {} && projects.filter(item=>item.id != id && item.library == project.library)} title="Similar Works" />
+    <QuickGallery array={!loading && projects.filter(item=>item.id != id && item.library == project.library)} title="Similar Works" />
     </>
    
   );
