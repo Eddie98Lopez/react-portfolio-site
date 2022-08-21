@@ -56,6 +56,11 @@ box-sizing:border-box;
       
       fill: ${(props) => props.theme.colors.white};
 
+      & svg{
+        height: 45px;
+        width: auto;
+      }
+
 
       & #hamburger {
         width:40px;

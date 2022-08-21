@@ -3,6 +3,7 @@ import GalleryThumb from "./GalleryThumb";
 import styled from "styled-components";
 import { Helmet } from "react-helmet";
 import { useStore } from "../../utils/store/StoreProvider";
+import { keywords } from "../../utils";
 
 const GalleryContainer = styled.div`
   padding: 5%;
@@ -23,7 +24,9 @@ const Gallery = () => {
   return (
     <GalleryContainer>
       <Helmet>
-        <title> | Eddie Lopez </title>
+        <title> Portfolio | Eddie Lopez </title>
+        <meta name='keywords' content={keywords}/>
+        <meta name='description' content={'Portfolio of different works from Eddie Lopez. Designer and Developer in the Fresno area.'}/>
       </Helmet>
       {sorted.map((item) => (
         <GalleryThumb key={Math.floor(Math.random()*10000000)} project={item} />

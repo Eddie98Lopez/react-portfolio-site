@@ -8,6 +8,7 @@ import { Helmet } from "react-helmet";
 import { useStore } from "../utils/store/StoreProvider";
 import { getProjectById } from "../utils/supabase";
 import ProjectDetails from "./ProjectDetails/ProjectDetails";
+import { keywords } from "../utils";
 
 const ProjectContext = createContext()
 export const useProject = ()=>useContext(ProjectContext)
@@ -33,6 +34,9 @@ const FeaturePage = () => {
 
   return (
     <>
+    {!loading && <Helmet><title>{project.title} | Eddie Lopez | Designer/Developer</title> 
+    <meta name='keywords' content={`${keywords}, ${project.description}, ${project.title}`}/>
+        <meta name='description' content={project.description}/></Helmet>}
     <Section>
 
       {!loading && <ProjectDetails project={project}/>}
