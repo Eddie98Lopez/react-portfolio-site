@@ -28,18 +28,29 @@ const DIV = styled.div`
   
   transform: rotate(-135deg);
   position:absolute;
+  width:30px;
+ 
   
 };
 & #Rectangle_10{
-  opacity: 0;
   
+  border: 2px solid white;
+  background:none;
+  position:absolute;
+  z-index:-1;
+  height: 45px;
+  width:45px;
+  transform:translate(-7.5px);
+  border-radius:40px;
   
-  height: 0px;
+
+  
   
 };
 & #Rectangle_11{
   
-  transform: rotate(135deg);
+  transform: rotate(135deg) ;
+  width:30px;  
   position:absolute;
   
 }`}

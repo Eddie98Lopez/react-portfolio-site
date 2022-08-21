@@ -8,7 +8,7 @@ const FullScreen = styled.div`
   align-items: center;
   position: fixed;
   z-index: 500;
-  padding: 5%;
+  padding: 2.5%;
   top: 0;
   left: 0;
   width: 100%;
@@ -39,7 +39,7 @@ const ImagesFullScreen = (props) => {
       <Carousel
         images={images}
         active={active}
-        height="75vh"
+        height="90vh"
         fit="contain"
         mobileHeight="100%"
       />

@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import ProjectInfo from "./ProjectInfo";
 import ProjectImages from "./ProjectImages";
-import { useProject } from "../FeaturePage";
 
 
 const ProjectWrap = styled.section`;
